@@ -1,0 +1,67 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}body{line-height:1}ol, ul{list-style:none}blockquote, q{quotes:none}blockquote:before, blockquote:after, q:before, q:after{content:''; content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse: collapse; border-spacing:0}
+.clear{clear:both !important; line-height:0 !important; height:0 !important; font-size:0 !important; margin:0 !important; padding:0 !important; float:none !important; overflow:hidden; }
+
+body{font-family:"微软雅黑", "arial"; font-size:12px; color:#444; overflow:hidden}
+select,input,textarea{font-family:"微软雅黑", "arial"; font-size:14px; box-sizing:content-box; -ms-box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box; margin:0}
+input:focus, select:focus, textarea:focus{background:#fffcce}
+input:hover, select:hover, textarea:hover{background:#fffcce !important}
+
+a{color:#595757; text-decoration:none}
+	a:hover{text-decoration:underline; color:#000}
+
+.green{color:#3caa00}
+
+.textbox_1{border: 1px solid #d5cec9; height:26px; width:240px; padding:5px; line-height:26px}
+.textbox_1_capcha{width:110px; margin-right:4px}
+
+.select_1{border: 1px solid #d5cec9; width:240px; padding:5px; height:26px}
+
+.button_1{height:32px; line-height:32px; font-size:16px; background:#006489; display:inline-block; color:#fff; padding:0 20px}
+.button_1:hover{color:#fff; background-color:#4bc1ed; text-decoration:none}
+
+.button_1_disabled{background:#888 !important; cursor:default !important}
+
+.button_1_a{background:#5eb990}
+.button_1_a:hover{background:#7dd5ad}
+
+
+.frame_1{margin:0 auto; width:980px}
+
+.form_1{}
+	.form_1 td{padding:5px}
+	.form_1 .label{font-size:14px}
+	.form_1 .actions{}
+		.form_1 .actions .button_1{margin-right:10px}
+	.form_1 .info .error{color:#f00}
+	.form_1 .text{font-size:14px; padding:10px 5px}
+
+.block_1{}
+	.block_1 h1{font-size:20px; font-weight:normal; margin:5px 0 20px 0}
+	.block_1 h2{font-size:14px; margin-bottom:10px}
+	.block_1_l{float:left}
+	.block_1_r{float:right}
+		.block_1_r p{margin:15px 0; line-height:18px}
+
+.block_1_account{}
+	.block_1_account .block_1_l{width:490px; border-right:solid 1px #ddd}
+	.block_1_account .block_1_r{width:400px; padding:20px 10px 10px 10px}
+
+.information_1{margin:10px 0 20px 0; font-size:14px; background:url(../images/user/icons.png) no-repeat; padding:5px 0 5px 25px}
+	.info_success{background-position:0 -6px; color:#00ac08}
+
+.main_header{margin:10px auto 20px auto; position:relative}
+	.main_header .logo{background:url(../images/user/logo.gif) no-repeat; display:block; width:250px; height:50px}
+	.main_header .sublogo{position:absolute; left:240px; top:2px}
+		.main_header .sublogo img{height:35px}
+	.main_header .account{position:absolute; right:0; top:5px}
+
+.main_footer{margin-top:20px; border-top:solid 1px #eee; padding-top:20px}
+	.main_footer li{margin-bottom:10px}
+
+.user_info{position:relative}
+	.user_info .avatar{float:left; margin:10px 15px 0 0}
+	.user_info .avatar img{width:72px; height:72px}
+	.user_info .form_1{float:left}
+	.user_info .actions{position:absolute; left:0; top:130px}
+		.user_info .actions a{text-decoration:underline}
+			.user_info .actions a:hover{text-decoration:none}

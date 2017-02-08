@@ -1,0 +1,22 @@
+<div class="frame_1 site_path">
+	当前位置：
+	<a href="/">首页</a> &gt;
+	<a href="/news/list-<?php echo $article->categoryid; ?>.html"><?php echo $article->name; ?></a>
+</div>
+<div class="frame_2">
+	<div class="frame_2_l">
+		<div class="news_detail">
+			<h1><?php echo $article->title; ?></h1>
+			<div class="info">
+				<span><?php echo $article->createdate; ?></span>
+				<?php /* <span>中关村在线</span> */ ?>
+			</div>
+			<div class="content">
+				<?php echo $article->content; ?>
+			</div>
+		</div>
+	</div>
+
+	<?php echo $__env->make('soft.partials.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<div class="clear"></div>
+</div>

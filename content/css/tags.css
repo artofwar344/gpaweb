@@ -1,0 +1,11 @@
+.tags ul{margin:0; padding:5px; text-align:center; background:#fff}
+.tags li{margin-bottom:5px; padding:0; list-style:none; display:inline-block}
+.tags li a{text-decoration:none; color:#555; padding:0 2px}
+.tags li a:hover{color:#007aa8}
+
+.tag1{font-size:100%}
+.tag2{font-size:110%}
+.tag3{font-size:130%}
+.tag4{font-size:150%}
+.tag5{font-size:160%}
+

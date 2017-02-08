@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel='shortcut icon' href='<?php echo Config::get('app.asset_url') . 'images/share/logo.ico'; ?>' type='image/x-icon' />
+	<title><?php if (!empty($title)): ?> <?php echo $title; ?> - <?php endif; ?> <?php echo $sitename; ?></title>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/user.js?<?php echo Ca\Consts::$ca_version; ?>"></script>
+	<link rel="stylesheet" href="<?php echo Config::get('app.asset_url'); ?>css/user.css?<?php echo Ca\Consts::$ca_version; ?>" />
+</head>
+<body>
+<div class="frame_1 main_header">
+	<a href="http://<?php echo app()->environment(); ?>" class="logo" <?php echo \Ca\Service\ParamsService::get('logourl') ? 'style="background-image: url(\'' .  str_replace(array('{0}', '{1}'), array(Config::get('app.asset_url') . 'images', '_user'), \Ca\Service\ParamsService::get('logourl')) . '\')"' : ''; ?>></a>
+	<?php if (\Ca\Service\ParamsService::get('showsublogo', 1) == 1): ?>
+	<div class="sublogo"><img src="<?php echo Config::get('app.asset_url') . 'images/customer/' . App::make('customer')->alias . '.jpg'; ?>" /></div>
+	<?php endif; ?>
+	<div class="account">
+		<?php echo HtmlExt::headerLogin(); ?>
+	</div>
+</div>
+<?php echo $content; ?>
+<div class="frame_1 main_footer">
+	<ul>
+		<li><a href="http://www.miitbeian.gov.cn" rel="nofollow" target="_blank"><?php echo Ca\Consts::$icp; ?></a> © 2005-2013 版权所有，并保留所有权利</li>
+		<li>支持部门: 中华人民共和国教育部科技发展中心</li>
+		<li>服务提供商: 赛尔网络 CERNET</li>
+	</ul>
+</div>
+</body>
+</html>

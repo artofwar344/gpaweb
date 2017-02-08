@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><?php if (!empty($title)): ?> <?php echo $title; ?> - <?php endif; ?> <?php echo $sitename; ?></title>
+	<link rel='shortcut icon' href="<?php echo Config::get('app.asset_url'); ?>images/share/logo.ico" type='image/x-icon' />
+	<?php if (App::make('customer')->alias == 'dlut'): ?>
+		<link href="<?php echo Config::get('app.asset_url') . 'css/customer/'.App::make('customer')->alias.'.css?' . Ca\Consts::$ca_version; ?>" rel="stylesheet" type="text/css" />
+	<?php else: ?>
+		<link href="<?php echo Config::get('app.asset_url') . 'css/customer/common.css?' . Ca\Consts::$ca_version; ?>" rel="stylesheet" type="text/css" />
+	<?php endif; ?>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.js"></script>
+</head>
+
+<body>
+<?php if (App::make('customer')->alias == 'dlut'): ?>
+<div class="ntac_header">
+	<div class="header_banner"></div>
+</div>
+<?php endif; ?>
+<?php if (App::make('customer')->alias == 'ccnu'): ?>
+<div class="main_banner main_banner_ccnu">
+	<div class="frame_1 banner banner_ccnu"></div>
+</div>
+<?php else: ?>
+<div class="main_banner">
+	<div class="frame_1 banner"></div>
+</div>
+<?php endif; ?>
+<?php if (View::exists('customer.' . App::make('customer')->alias . '.partials.header')): ?>
+<?php echo $__env->make('customer.' . App::make('customer')->alias . '.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php else: ?>
+<?php echo $__env->make('customer.common.partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php endif; ?>
+<div class="main_content_frame">
+<?php echo $content; ?>
+</div>
+<?php if (View::exists('customer.' . App::make('customer')->alias . '.partials.footer')): ?>
+<?php echo $__env->make('customer.' . App::make('customer')->alias . '.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php else: ?>
+<?php echo $__env->make('customer.common.partials.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php endif; ?>
+</body>
+</html>

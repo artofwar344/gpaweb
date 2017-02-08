@@ -1,0 +1,39 @@
+<div class="frame_1 site_path">
+	当前位置：
+	<a href="/">首页</a> &gt;
+	<?php echo $category_parent_name; ?>
+</div>
+<div class="frame_2">
+	<div class="frame_2_l">
+		<?php foreach ($softcategories as $softcategory): ?>
+		<?php if (sizeof($softcategory['results']) > 0): ?>
+		<div class="category_list">
+			<h1 class="header_1 header_1_a">
+				<span><?php echo $softcategory['category_name']; ?></span>
+				<a class="more" href="/category/<?php echo $softcategory['categoryid']; ?>">【更多】</a>
+			</h1>
+			<div class="software_list">
+			<?php foreach ($softcategory['results'] as $key => $soft): ?>
+				<div class="software">
+					<a class="name" href="/soft/<?php echo $soft->softid; ?>.html">
+						<span style="background-image:url(<?php echo Ca\Service\SoftService::icon($soft->softid); ?>)"><?php echo $soft->name; ?> <?php echo $soft->version; ?></span>
+					</a>
+					<div class="intro"><?php echo $soft->description; ?></div>
+					<div class="info">
+						<?php echo Ca\Consts::$soft_licensetype_texts[$soft->licensetype]; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+						软件大小: <?php echo Ca\Common::format_filesize($soft->filesize); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+						人气: <?php echo $soft->views; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+						更新: <?php echo $soft->updatedate; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+						运行环境: <?php echo $soft->platform; ?>
+					</div>
+				</div>
+			<?php endforeach; ?>
+			</div>
+		</div>
+		<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+
+	<?php echo $__env->make('soft.partials.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<div class="clear"></div>
+</div>

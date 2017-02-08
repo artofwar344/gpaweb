@@ -1,0 +1,5 @@
+<?php echo $__env->make ('share.layouts.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div class="main_content">
+<?php echo $content; ?>
+</div>
+<?php echo $__env->make ('share.layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

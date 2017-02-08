@@ -1,0 +1,13 @@
+<div class="main_footer">
+	<div class="frame_1 wrap">
+		<div class="info">
+			<ul>
+				<li><a href="http://www.miitbeian.gov.cn" rel="nofollow" target="_blank">{{ Ca\Consts::$icp }}</a> © 2012 版权所有,并保留所有权利</li>
+				<li>支持部门: 中华人民共和国教育部科技发展中心</li>
+				<li>服务提供商: 赛尔网络 CERNET</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div class="spacer_1"></div>
+<div class="frame_1">
+	<div class="frame_1_l">
+		<div class="frame_1_l">
+			<h1 class="header_1"><span>文档专题</span></h1>
+			<div class="spacer_1"></div>
+			<div class="subject_list">
+				<?php foreach ($topics as $topic): ?>
+				<div class="item">
+					<a class="title" href="<?php echo '/topic/detail?id=' . $topic->topicid; ?>"><?php echo $topic->name; ?></a>
+					<div class="rating">
+						<?php echo Ca\Service\DocumentRatingService::rating_star_html($topic->topic_score, 'big'); ?>
+						<span><strong><?php echo $topic->rating_user_count; ?></strong>人评价</span>
+					</div>
+					<div class="info">
+						<?php echo $topic->user_name; ?> 创建于<?php echo Ca\Common::datetime_to_date($topic->createdate); ?>
+					</div>
+					<div class="content">
+						<?php echo $topic->intro; ?>
+					</div>
+					<div class="amount">
+						<strong><?php echo $topic->favorite_user_count; ?></strong> 收藏&nbsp;&nbsp;|&nbsp;&nbsp;
+						<strong><?php echo $topic->views; ?></strong> 浏览
+					</div>
+				</div>
+				<?php endforeach; ?>
+			</div>
+			<?php if ($topics->getLastPage() > 1): ?>
+			<?php echo $topic->links(); ?>
+			<?php endif; ?>
+		</div>
+	</div>
+	<div class="frame_1_r">
+		<?php echo $__env->make ('share.partials.side.topic_rank', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<div class="spacer_1"></div>
+		<?php echo Ca\Service\AdService::show('210w_ad4', 1, 'ad_1'); ?>
+		<?php echo $__env->make('share.partials.side.document_rank', array('documents' => $hot_document, 'rankTitle' => '文档排行榜'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+	<div class="clear"></div>
+</div>

@@ -1,0 +1,156 @@
+<!DOCTYPE html public "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title><?php echo '管理中心 - ' . Ca\Consts::$app_name . '(' . Ca\Service\ParamsService::get('customername') . ')'; ?></title>
+	<link rel='shortcut icon' href='<?php echo Config::get('app.asset_url'); ?>images/CA.ico' type='image/x-icon' />
+	<link rel="stylesheet" href="<?php echo Config::get('app.asset_url'); ?>css/backend.css?ver=<?php echo Ca\Consts::$ca_version; ?>" />
+	<link rel="stylesheet" href="<?php echo Config::get('app.asset_url'); ?>css/manage.css?ver=<?php echo Ca\Consts::$ca_version; ?>" />
+	<link rel="stylesheet" href="<?php echo Config::get('app.asset_url'); ?>css/introjs.css?ver=<?php echo Ca\Consts::$ca_version; ?>" />
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.resize.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.hoverIntent.minified.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/intro.js"></script>
+	<?php if ($department_count == 0) :?>
+	<script type="text/javascript">
+//		$(function() {
+//			var stepOne = $(".main_nav").find("ul.popup:eq(0)");
+//			if (stepOne.text() == "部门管理") {
+//				stepOne.show();
+//				stepOne.on("mouseout", function() {intro.exit();});
+//				stepOne.find("li:eq(0)").attr("data-step", "1").attr("data-intro", "点击这里添加部门").attr("data-position", "right");
+//				var intro = introJs().setOptions({"skipLabel":"确定", "showStepNumbers":false}).start();
+//			}
+//		});
+	</script>
+	<?php endif;?>
+	<script type="text/javascript">
+		$(function() {
+			$(window).resize(function() {
+				$(".main_content").height($(window).height() - 117);
+			}).resize();
+			$(".main_welcome").fadeIn();
+		});
+	</script>
+</head>
+<body>
+<?php echo $__env->make('customermanage/partials/mainheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('customermanage/partials/mainmenu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<div class="main_content main_welcome">
+	<h1>授权产品</h1>
+	<div class="table_1">
+		<table>
+			<tbody>
+			<tr>
+				<th>编号</th>
+				<th>产品</th>
+				<th>总套数</th>
+				<th>分配给下级部门</th>
+				<th>分配给用户</th>
+				<th>可用量</th>
+			</tr>
+			<?php foreach ($products as $product): ?>
+			<tr>
+				<td><?php echo $product['productid']; ?></td>
+				<td><?php echo $product['name']; ?></td>
+				<td><?php echo $product['keycount']; ?></td>
+				<td><?php echo $product['departmentassigncount']; ?></td>
+				<td><?php echo $product['assigncount']; ?></td>
+				<td class="count"><?php echo $product['keycount'] - $product['departmentassigncount'] - $product['assigncount']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	<h1>授权产品组</h1>
+	<div class="table_1">
+		<table class="table_1">
+			<tbody>
+			<tr>
+				<th>编号</th>
+				<th>产品组名称</th>
+				<th>总套数</th>
+				<th>分配给下级部门</th>
+				<th>分配给用户</th>
+				<th>可用量</th>
+			</tr>
+			<?php foreach ($keys as $key): ?>
+			<tr>
+				<td><?php echo $key['keyid']; ?></td>
+				<td><?php echo $key['name']; ?></td>
+				<td><?php echo $key['keycount']; ?></td>
+				<td><?php echo $key['departmentassigncount']; ?></td>
+				<td><?php echo $key['assigncount']; ?></td>
+				<td class="count"><?php echo $key['keycount'] - $key['departmentassigncount'] - $key['assigncount']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	<h1>最新请求记录</h1>
+	<div class="table_1">
+		<table>
+			<tbody>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>请求商品</th>
+				<th>请求数量</th>
+				<th>请求日期</th>
+				<th>请求理由</th>
+				<th>状态</th>
+			</tr>
+			<?php foreach ($keyassigns as $keyassign): ?>
+			<tr>
+				<td><?php echo $keyassign['userkeyid']; ?></td>
+				<td><?php echo $keyassign['user_name']; ?></td>
+				<td><?php echo $keyassign['product_name']; ?></td>
+				<td><?php echo $keyassign['requestcount']; ?></td>
+				<td><?php echo $keyassign['requestdate']; ?></td>
+				<td><?php echo $keyassign['reason']; ?></td>
+				<td><?php echo $keyassign['status_text']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+	<h1>最新激活记录</h1>
+	<div class="table_1">
+		<table>
+			<tbody>
+			<tr>
+				<th>编号</th>
+				<th>姓名</th>
+				<th>产品</th>
+				<th>密钥</th>
+				<th>IP</th>
+				<th>机器号</th>
+				<th>错误代码</th>
+				<th>开始时间</th>
+				<th>结束时间</th>
+				<th>状态</th>
+			</tr>
+			<?php foreach ($usages as $usage): ?>
+			<tr>
+				<td><?php echo $usage['usageid']; ?></td>
+				<td><?php echo $usage['name']; ?></td>
+				<td><?php echo $usage['product_name']; ?></td>
+				<td><?php echo $usage['key_name']; ?></td>
+				<td><?php echo $usage['ip_text']; ?></td>
+				<td><?php echo $usage['computerid']; ?></td>
+				<td><?php echo $usage['errorcode']; ?></td>
+				<td><?php echo $usage['begindate']; ?></td>
+				<td><?php echo $usage['enddate']; ?></td>
+				<td><?php echo $usage['status_text']; ?></td>
+			</tr>
+			<?php endforeach; ?>
+			</tbody>
+		</table>
+	</div>
+</div>
+<?php echo $__env->make('customermanage/partials/mainfooter', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</body>
+</html>

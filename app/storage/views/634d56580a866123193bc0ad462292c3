@@ -1,0 +1,18 @@
+<?php  $hot_meeting = \Ca\Service\MeetingService::get_hot_meeting();  ?>
+<?php if (count($hot_meeting) > 0): ?>
+<div class="ranking_block">
+	<h1>热门讲座</h1>
+	<table>
+		<?php foreach ($hot_meeting as $key => $meeting): ?>
+			<tr>
+				<td class="name">
+					<span class="index_<?php echo $key; ?>"><?php echo $key + 1; ?></span>
+					<a class="title" title="<?php echo $meeting->name; ?>" href="<?php echo url('meeting/detail?id=' . $meeting->meetingid); ?>"><?php echo $meeting->name; ?></a>
+				</td>
+				<td class="pages"><?php echo $meeting->apply_count; ?></td>
+			</tr>
+		<?php endforeach; ?>
+	</table>
+</div>
+<div class="clear"></div>
+<?php endif; ?>

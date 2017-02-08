@@ -1,0 +1,885 @@
+9ADA .START phpCAS-1.1.3 ****************** [CAS.php:470]
+9ADA .=> phpCAS::client('2.0', 'sso-cas.univ-rennes1.fr', 443, '') [simple.php:13]
+9ADA .|    => CASClient::CASClient('2.0', false, 'sso-cas.univ-rennes1.fr', 443, '', true) [CAS.php:373]
+9ADA .|    |    Starting a new session [client.php:600]
+9ADA .|    <= ''
+9ADA .<= ''
+9ADA .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+9ADA .<= ''
+9ADA .=> phpCAS::forceAuthentication() [simple.php:19]
+9ADA .|    => CASClient::forceAuthentication() [CAS.php:893]
+9ADA .|    |    => CASClient::isAuthenticated() [client.php:869]
+9ADA .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+9ADA .|    |    |    |    no user found [client.php:1110]
+9ADA .|    |    |    <= false
+9ADA .|    |    |    no ticket found [client.php:1027]
+9ADA .|    |    <= false
+9ADA .|    |    => CASClient::redirectToCas(false) [client.php:878]
+9ADA .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+9ADA .|    |    |    |    => CASClient::getURL() [client.php:361]
+9ADA .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+9ADA .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+9ADA .|    |    |    <= 'https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+9ADA .|    |    |    Redirect to : https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+9ADA .|    |    |    exit()
+9ADA .|    |    |    -
+9ADA .|    |    -
+9ADA .|    -
+173C .START phpCAS-1.1.3 ****************** [CAS.php:470]
+173C .=> phpCAS::client('2.0', 'sso-cas.univ-rennes1.fr', 443, '') [simple.php:13]
+173C .|    => CASClient::CASClient('2.0', false, 'sso-cas.univ-rennes1.fr', 443, '', true) [CAS.php:373]
+173C .|    |    Starting a new session [client.php:600]
+173C .|    <= ''
+173C .<= ''
+173C .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+173C .<= ''
+173C .=> phpCAS::forceAuthentication() [simple.php:19]
+173C .|    => CASClient::forceAuthentication() [CAS.php:893]
+173C .|    |    => CASClient::isAuthenticated() [client.php:869]
+173C .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+173C .|    |    |    |    no user found [client.php:1110]
+173C .|    |    |    <= false
+173C .|    |    |    no ticket found [client.php:1027]
+173C .|    |    <= false
+173C .|    |    => CASClient::redirectToCas(false) [client.php:878]
+173C .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+173C .|    |    |    |    => CASClient::getURL() [client.php:361]
+173C .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+173C .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+173C .|    |    |    <= 'https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+173C .|    |    |    Redirect to : https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+173C .|    |    |    exit()
+173C .|    |    |    -
+173C .|    |    -
+173C .|    -
+E8C8 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+E8C8 .=> phpCAS::client('2.0', 'sso-cas.univ-rennes1.fr', 443, '') [simple.php:13]
+E8C8 .|    => CASClient::CASClient('2.0', false, 'sso-cas.univ-rennes1.fr', 443, '', true) [CAS.php:373]
+E8C8 .|    |    Starting a new session [client.php:600]
+E8C8 .|    <= ''
+E8C8 .<= ''
+E8C8 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+E8C8 .<= ''
+E8C8 .=> phpCAS::forceAuthentication() [simple.php:19]
+E8C8 .|    => CASClient::forceAuthentication() [CAS.php:893]
+E8C8 .|    |    => CASClient::isAuthenticated() [client.php:869]
+E8C8 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+E8C8 .|    |    |    |    no user found [client.php:1110]
+E8C8 .|    |    |    <= false
+E8C8 .|    |    |    no ticket found [client.php:1027]
+E8C8 .|    |    <= false
+E8C8 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+E8C8 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+E8C8 .|    |    |    |    => CASClient::getURL() [client.php:361]
+E8C8 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+E8C8 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+E8C8 .|    |    |    <= 'https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+E8C8 .|    |    |    Redirect to : https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+E8C8 .|    |    |    exit()
+E8C8 .|    |    |    -
+E8C8 .|    |    -
+E8C8 .|    -
+81C6 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+81C6 .=> phpCAS::client('2.0', 'https://www.test.com:8043/cas_server/', 8043, '') [simple.php:13]
+81C6 .|    => CASClient::CASClient('2.0', false, 'https://www.test.com:8043/cas_server/', 8043, '', true) [CAS.php:373]
+81C6 .|    |    Starting a new session [client.php:600]
+81C6 .|    <= ''
+81C6 .<= ''
+81C6 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+81C6 .<= ''
+81C6 .=> phpCAS::forceAuthentication() [simple.php:19]
+81C6 .|    => CASClient::forceAuthentication() [CAS.php:893]
+81C6 .|    |    => CASClient::isAuthenticated() [client.php:869]
+81C6 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+81C6 .|    |    |    |    no user found [client.php:1110]
+81C6 .|    |    |    <= false
+81C6 .|    |    |    no ticket found [client.php:1027]
+81C6 .|    |    <= false
+81C6 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+81C6 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+81C6 .|    |    |    |    => CASClient::getURL() [client.php:361]
+81C6 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+81C6 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+81C6 .|    |    |    <= 'https://https://www.test.com:8043/cas_server/:8043/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+81C6 .|    |    |    Redirect to : https://https://www.test.com:8043/cas_server/:8043/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+81C6 .|    |    |    exit()
+81C6 .|    |    |    -
+81C6 .|    |    -
+81C6 .|    -
+08EF .START phpCAS-1.1.3 ****************** [CAS.php:470]
+08EF .=> phpCAS::client('2.0', 'www.test.com:8043/cas_server/', 8043, '') [simple.php:13]
+08EF .|    => CASClient::CASClient('2.0', false, 'www.test.com:8043/cas_server/', 8043, '', true) [CAS.php:373]
+08EF .|    |    Starting a new session [client.php:600]
+08EF .|    <= ''
+08EF .<= ''
+08EF .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+08EF .<= ''
+08EF .=> phpCAS::forceAuthentication() [simple.php:19]
+08EF .|    => CASClient::forceAuthentication() [CAS.php:893]
+08EF .|    |    => CASClient::isAuthenticated() [client.php:869]
+08EF .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+08EF .|    |    |    |    no user found [client.php:1110]
+08EF .|    |    |    <= false
+08EF .|    |    |    no ticket found [client.php:1027]
+08EF .|    |    <= false
+08EF .|    |    => CASClient::redirectToCas(false) [client.php:878]
+08EF .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+08EF .|    |    |    |    => CASClient::getURL() [client.php:361]
+08EF .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+08EF .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+08EF .|    |    |    <= 'https://www.test.com:8043/cas_server/:8043/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+08EF .|    |    |    Redirect to : https://www.test.com:8043/cas_server/:8043/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+08EF .|    |    |    exit()
+08EF .|    |    |    -
+08EF .|    |    -
+08EF .|    -
+3AF0 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+3AF0 .=> phpCAS::client('2.0', 'www.test.com:8043/cas_server/', 8043, '') [simple.php:13]
+3AF0 .|    => CASClient::CASClient('2.0', false, 'www.test.com:8043/cas_server/', 8043, '', true) [CAS.php:373]
+3AF0 .|    |    Starting a new session [client.php:600]
+3AF0 .|    |    ST or PT 'ST-1-1x5yoIVjZdwFRT3mF2yg-cas' found [client.php:677]
+3AF0 .|    <= ''
+3AF0 .<= ''
+3AF0 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+3AF0 .<= ''
+3AF0 .=> phpCAS::forceAuthentication() [simple.php:19]
+3AF0 .|    => CASClient::forceAuthentication() [CAS.php:893]
+3AF0 .|    |    => CASClient::isAuthenticated() [client.php:869]
+3AF0 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+3AF0 .|    |    |    |    no user found [client.php:1110]
+3AF0 .|    |    |    <= false
+3AF0 .|    |    |    PT `ST-1-1x5yoIVjZdwFRT3mF2yg-cas' is present [client.php:1005]
+3AF0 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+3AF0 .|    |    |    |    => CASClient::getURL() [client.php:481]
+3AF0 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+3AF0 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+3AF0 .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server/:8043/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-1-1x5yoIVjZdwFRT3mF2yg-cas', '', NULL, NULL, NULL) [client.php:2536]
+4039 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+4039 .=> phpCAS::client('2.0', 'sso-cas.univ-rennes1.fr', 443, '') [simple.php:13]
+4039 .|    => CASClient::CASClient('2.0', false, 'sso-cas.univ-rennes1.fr', 443, '', true) [CAS.php:373]
+4039 .|    |    Starting a new session [client.php:600]
+4039 .|    <= ''
+4039 .<= ''
+4039 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+4039 .<= ''
+4039 .=> phpCAS::forceAuthentication() [simple.php:19]
+4039 .|    => CASClient::forceAuthentication() [CAS.php:893]
+4039 .|    |    => CASClient::isAuthenticated() [client.php:869]
+4039 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+4039 .|    |    |    |    no user found [client.php:1110]
+4039 .|    |    |    <= false
+4039 .|    |    |    no ticket found [client.php:1027]
+4039 .|    |    <= false
+4039 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+4039 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+4039 .|    |    |    |    => CASClient::getURL() [client.php:361]
+4039 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+4039 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+4039 .|    |    |    <= 'https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+4039 .|    |    |    Redirect to : https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+4039 .|    |    |    exit()
+4039 .|    |    |    -
+4039 .|    |    -
+4039 .|    -
+3161 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+3161 .=> phpCAS::client('2.0', 'www.test.com:8043/cas_server/', 443, '') [simple.php:13]
+3161 .|    => CASClient::CASClient('2.0', false, 'www.test.com:8043/cas_server/', 443, '', true) [CAS.php:373]
+3161 .|    |    Starting a new session [client.php:600]
+3161 .|    <= ''
+3161 .<= ''
+3161 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+3161 .<= ''
+3161 .=> phpCAS::forceAuthentication() [simple.php:19]
+3161 .|    => CASClient::forceAuthentication() [CAS.php:893]
+3161 .|    |    => CASClient::isAuthenticated() [client.php:869]
+3161 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+3161 .|    |    |    |    no user found [client.php:1110]
+3161 .|    |    |    <= false
+3161 .|    |    |    no ticket found [client.php:1027]
+3161 .|    |    <= false
+3161 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+3161 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+3161 .|    |    |    |    => CASClient::getURL() [client.php:361]
+3161 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+3161 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+3161 .|    |    |    <= 'https://www.test.com:8043/cas_server//login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+3161 .|    |    |    Redirect to : https://www.test.com:8043/cas_server//login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+3161 .|    |    |    exit()
+3161 .|    |    |    -
+3161 .|    |    -
+3161 .|    -
+55D9 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+55D9 .=> phpCAS::client('2.0', 'www.test.com:8043/cas_server/', 443, '') [simple.php:13]
+55D9 .|    => CASClient::CASClient('2.0', false, 'www.test.com:8043/cas_server/', 443, '', true) [CAS.php:373]
+55D9 .|    |    Starting a new session [client.php:600]
+55D9 .|    |    ST or PT 'ST-2-TNxUeLlgDNIhI7EurfpE-cas' found [client.php:677]
+55D9 .|    <= ''
+55D9 .<= ''
+55D9 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+55D9 .<= ''
+55D9 .=> phpCAS::forceAuthentication() [simple.php:19]
+55D9 .|    => CASClient::forceAuthentication() [CAS.php:893]
+55D9 .|    |    => CASClient::isAuthenticated() [client.php:869]
+55D9 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+55D9 .|    |    |    |    no user found [client.php:1110]
+55D9 .|    |    |    <= false
+55D9 .|    |    |    PT `ST-2-TNxUeLlgDNIhI7EurfpE-cas' is present [client.php:1005]
+55D9 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+55D9 .|    |    |    |    => CASClient::getURL() [client.php:481]
+55D9 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+55D9 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+55D9 .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server//proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-2-TNxUeLlgDNIhI7EurfpE-cas', '', NULL, NULL, NULL) [client.php:2536]
+B90D .START phpCAS-1.1.3 ****************** [CAS.php:470]
+B90D .=> phpCAS::client('2.0', 'sso-cas.univ-rennes1.fr', 443, '') [simple.php:13]
+B90D .|    => CASClient::CASClient('2.0', false, 'sso-cas.univ-rennes1.fr', 443, '', true) [CAS.php:373]
+B90D .|    |    Starting a new session [client.php:600]
+B90D .|    <= ''
+B90D .<= ''
+B90D .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+B90D .<= ''
+B90D .=> phpCAS::forceAuthentication() [simple.php:19]
+B90D .|    => CASClient::forceAuthentication() [CAS.php:893]
+B90D .|    |    => CASClient::isAuthenticated() [client.php:869]
+B90D .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+B90D .|    |    |    |    no user found [client.php:1110]
+B90D .|    |    |    <= false
+B90D .|    |    |    no ticket found [client.php:1027]
+B90D .|    |    <= false
+B90D .|    |    => CASClient::redirectToCas(false) [client.php:878]
+B90D .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+B90D .|    |    |    |    => CASClient::getURL() [client.php:361]
+B90D .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+B90D .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+B90D .|    |    |    <= 'https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+B90D .|    |    |    Redirect to : https://sso-cas.univ-rennes1.fr/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+B90D .|    |    |    exit()
+B90D .|    |    |    -
+B90D .|    |    -
+B90D .|    -
+469F .START phpCAS-1.1.3 ****************** [CAS.php:470]
+469F .=> phpCAS::client('2.0', 'www.test.com:8180/cas_server/login', 443, '') [simple.php:13]
+469F .|    => CASClient::CASClient('2.0', false, 'www.test.com:8180/cas_server/login', 443, '', true) [CAS.php:373]
+469F .|    |    Starting a new session [client.php:600]
+469F .|    <= ''
+469F .<= ''
+469F .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+469F .<= ''
+469F .=> phpCAS::forceAuthentication() [simple.php:19]
+469F .|    => CASClient::forceAuthentication() [CAS.php:893]
+469F .|    |    => CASClient::isAuthenticated() [client.php:869]
+469F .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+469F .|    |    |    |    no user found [client.php:1110]
+469F .|    |    |    <= false
+469F .|    |    |    no ticket found [client.php:1027]
+469F .|    |    <= false
+469F .|    |    => CASClient::redirectToCas(false) [client.php:878]
+469F .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+469F .|    |    |    |    => CASClient::getURL() [client.php:361]
+469F .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+469F .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+469F .|    |    |    <= 'https://www.test.com:8180/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+469F .|    |    |    Redirect to : https://www.test.com:8180/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+469F .|    |    |    exit()
+469F .|    |    |    -
+469F .|    |    -
+469F .|    -
+F264 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+F264 .=> phpCAS::client('2.0', 'www.test.com:8180/cas_server/login', 443, '') [simple.php:13]
+F264 .|    => CASClient::CASClient('2.0', false, 'www.test.com:8180/cas_server/login', 443, '', true) [CAS.php:373]
+F264 .|    |    Starting a new session [client.php:600]
+F264 .|    <= ''
+F264 .<= ''
+F264 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+F264 .<= ''
+F264 .=> phpCAS::forceAuthentication() [simple.php:19]
+F264 .|    => CASClient::forceAuthentication() [CAS.php:893]
+F264 .|    |    => CASClient::isAuthenticated() [client.php:869]
+F264 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+F264 .|    |    |    |    no user found [client.php:1110]
+F264 .|    |    |    <= false
+F264 .|    |    |    no ticket found [client.php:1027]
+F264 .|    |    <= false
+F264 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+F264 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+F264 .|    |    |    |    => CASClient::getURL() [client.php:361]
+F264 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+F264 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+F264 .|    |    |    <= 'https://www.test.com:8180/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+F264 .|    |    |    Redirect to : https://www.test.com:8180/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+F264 .|    |    |    exit()
+F264 .|    |    |    -
+F264 .|    |    -
+F264 .|    -
+4436 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+4436 .=> phpCAS::client('2.0', 'www.test.com/cas_server/login', 8443, '') [simple.php:13]
+4436 .|    => CASClient::CASClient('2.0', false, 'www.test.com/cas_server/login', 8443, '', true) [CAS.php:373]
+4436 .|    |    Starting a new session [client.php:600]
+4436 .|    <= ''
+4436 .<= ''
+4436 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+4436 .<= ''
+4436 .=> phpCAS::forceAuthentication() [simple.php:19]
+4436 .|    => CASClient::forceAuthentication() [CAS.php:893]
+4436 .|    |    => CASClient::isAuthenticated() [client.php:869]
+4436 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+4436 .|    |    |    |    no user found [client.php:1110]
+4436 .|    |    |    <= false
+4436 .|    |    |    no ticket found [client.php:1027]
+4436 .|    |    <= false
+4436 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+4436 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+4436 .|    |    |    |    => CASClient::getURL() [client.php:361]
+4436 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+4436 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+4436 .|    |    |    <= 'https://www.test.com/cas_server/login:8443/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+4436 .|    |    |    Redirect to : https://www.test.com/cas_server/login:8443/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+4436 .|    |    |    exit()
+4436 .|    |    |    -
+4436 .|    |    -
+4436 .|    -
+91A7 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+91A7 .=> phpCAS::client('2.0', 'www.test.com/', 8443, 'cas_server/login') [simple.php:13]
+91A7 .|    => CASClient::CASClient('2.0', false, 'www.test.com/', 8443, 'cas_server/login', true) [CAS.php:373]
+91A7 .|    |    Starting a new session [client.php:600]
+91A7 .|    <= ''
+91A7 .<= ''
+91A7 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+91A7 .<= ''
+91A7 .=> phpCAS::forceAuthentication() [simple.php:19]
+91A7 .|    => CASClient::forceAuthentication() [CAS.php:893]
+91A7 .|    |    => CASClient::isAuthenticated() [client.php:869]
+91A7 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+91A7 .|    |    |    |    no user found [client.php:1110]
+91A7 .|    |    |    <= false
+91A7 .|    |    |    no ticket found [client.php:1027]
+91A7 .|    |    <= false
+91A7 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+91A7 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+91A7 .|    |    |    |    => CASClient::getURL() [client.php:361]
+91A7 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+91A7 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+91A7 .|    |    |    <= 'https://www.test.com/:8443/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+91A7 .|    |    |    Redirect to : https://www.test.com/:8443/cas_server/login/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+91A7 .|    |    |    exit()
+91A7 .|    |    |    -
+91A7 .|    |    -
+91A7 .|    -
+C2AD .START phpCAS-1.1.3 ****************** [CAS.php:470]
+C2AD .=> phpCAS::client('2.0', 'www.test.com', 8443, 'cas_server') [simple.php:13]
+C2AD .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8443, 'cas_server', true) [CAS.php:373]
+C2AD .|    |    Starting a new session [client.php:600]
+C2AD .|    <= ''
+C2AD .<= ''
+C2AD .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+C2AD .<= ''
+C2AD .=> phpCAS::forceAuthentication() [simple.php:19]
+C2AD .|    => CASClient::forceAuthentication() [CAS.php:893]
+C2AD .|    |    => CASClient::isAuthenticated() [client.php:869]
+C2AD .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+C2AD .|    |    |    |    no user found [client.php:1110]
+C2AD .|    |    |    <= false
+C2AD .|    |    |    no ticket found [client.php:1027]
+C2AD .|    |    <= false
+C2AD .|    |    => CASClient::redirectToCas(false) [client.php:878]
+C2AD .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+C2AD .|    |    |    |    => CASClient::getURL() [client.php:361]
+C2AD .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+C2AD .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+C2AD .|    |    |    <= 'https://www.test.com:8443/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+C2AD .|    |    |    Redirect to : https://www.test.com:8443/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+C2AD .|    |    |    exit()
+C2AD .|    |    |    -
+C2AD .|    |    -
+C2AD .|    -
+4A1F .START phpCAS-1.1.3 ****************** [CAS.php:470]
+4A1F .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+4A1F .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+4A1F .|    |    Starting a new session [client.php:600]
+4A1F .|    <= ''
+4A1F .<= ''
+4A1F .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+4A1F .<= ''
+4A1F .=> phpCAS::forceAuthentication() [simple.php:19]
+4A1F .|    => CASClient::forceAuthentication() [CAS.php:893]
+4A1F .|    |    => CASClient::isAuthenticated() [client.php:869]
+4A1F .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+4A1F .|    |    |    |    no user found [client.php:1110]
+4A1F .|    |    |    <= false
+4A1F .|    |    |    no ticket found [client.php:1027]
+4A1F .|    |    <= false
+4A1F .|    |    => CASClient::redirectToCas(false) [client.php:878]
+4A1F .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+4A1F .|    |    |    |    => CASClient::getURL() [client.php:361]
+4A1F .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+4A1F .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+4A1F .|    |    |    <= 'https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+4A1F .|    |    |    Redirect to : https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+4A1F .|    |    |    exit()
+4A1F .|    |    |    -
+4A1F .|    |    -
+4A1F .|    -
+79FE .START phpCAS-1.1.3 ****************** [CAS.php:470]
+79FE .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+79FE .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+79FE .|    |    Starting a new session [client.php:600]
+79FE .|    |    ST or PT 'ST-3-g63bRDTiBblDGMis9fcN-cas' found [client.php:677]
+79FE .|    <= ''
+79FE .<= ''
+79FE .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+79FE .<= ''
+79FE .=> phpCAS::forceAuthentication() [simple.php:19]
+79FE .|    => CASClient::forceAuthentication() [CAS.php:893]
+79FE .|    |    => CASClient::isAuthenticated() [client.php:869]
+79FE .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+79FE .|    |    |    |    no user found [client.php:1110]
+79FE .|    |    |    <= false
+79FE .|    |    |    PT `ST-3-g63bRDTiBblDGMis9fcN-cas' is present [client.php:1005]
+79FE .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+79FE .|    |    |    |    => CASClient::getURL() [client.php:481]
+79FE .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+79FE .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+79FE .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-3-g63bRDTiBblDGMis9fcN-cas', '', NULL, NULL, NULL) [client.php:2536]
+5EB3 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+5EB3 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+5EB3 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+5EB3 .|    |    Starting a new session [client.php:600]
+5EB3 .|    <= ''
+5EB3 .<= ''
+5EB3 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+5EB3 .<= ''
+5EB3 .=> phpCAS::forceAuthentication() [simple.php:19]
+5EB3 .|    => CASClient::forceAuthentication() [CAS.php:893]
+5EB3 .|    |    => CASClient::isAuthenticated() [client.php:869]
+5EB3 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+5EB3 .|    |    |    |    no user found [client.php:1110]
+5EB3 .|    |    |    <= false
+5EB3 .|    |    |    no ticket found [client.php:1027]
+5EB3 .|    |    <= false
+5EB3 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+5EB3 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+5EB3 .|    |    |    |    => CASClient::getURL() [client.php:361]
+5EB3 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+5EB3 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+5EB3 .|    |    |    <= 'https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+5EB3 .|    |    |    Redirect to : https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+5EB3 .|    |    |    exit()
+5EB3 .|    |    |    -
+5EB3 .|    |    -
+5EB3 .|    -
+D9F6 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+D9F6 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+D9F6 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+D9F6 .|    |    Starting a new session [client.php:600]
+D9F6 .|    |    ST or PT 'ST-4-OjZBQRDiC6bDzct15QmB-cas' found [client.php:677]
+D9F6 .|    <= ''
+D9F6 .<= ''
+D9F6 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+D9F6 .<= ''
+D9F6 .=> phpCAS::forceAuthentication() [simple.php:19]
+D9F6 .|    => CASClient::forceAuthentication() [CAS.php:893]
+D9F6 .|    |    => CASClient::isAuthenticated() [client.php:869]
+D9F6 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+D9F6 .|    |    |    |    no user found [client.php:1110]
+D9F6 .|    |    |    <= false
+D9F6 .|    |    |    PT `ST-4-OjZBQRDiC6bDzct15QmB-cas' is present [client.php:1005]
+D9F6 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+D9F6 .|    |    |    |    => CASClient::getURL() [client.php:481]
+D9F6 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+D9F6 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+D9F6 .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-4-OjZBQRDiC6bDzct15QmB-cas', '', NULL, NULL, NULL) [client.php:2536]
+0698 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+0698 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+0698 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+0698 .|    |    Starting a new session [client.php:600]
+0698 .|    <= ''
+0698 .<= ''
+0698 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+0698 .<= ''
+0698 .=> phpCAS::forceAuthentication() [simple.php:19]
+0698 .|    => CASClient::forceAuthentication() [CAS.php:893]
+0698 .|    |    => CASClient::isAuthenticated() [client.php:869]
+0698 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+0698 .|    |    |    |    no user found [client.php:1110]
+0698 .|    |    |    <= false
+0698 .|    |    |    no ticket found [client.php:1027]
+0698 .|    |    <= false
+0698 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+0698 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+0698 .|    |    |    |    => CASClient::getURL() [client.php:361]
+0698 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+0698 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+0698 .|    |    |    <= 'https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+0698 .|    |    |    Redirect to : https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+0698 .|    |    |    exit()
+0698 .|    |    |    -
+0698 .|    |    -
+0698 .|    -
+C2DA .START phpCAS-1.1.3 ****************** [CAS.php:470]
+C2DA .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+C2DA .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+C2DA .|    |    Starting a new session [client.php:600]
+C2DA .|    |    ST or PT 'ST-5-SE9qamMLsOyfrNfiHf23-cas' found [client.php:677]
+C2DA .|    <= ''
+C2DA .<= ''
+C2DA .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+C2DA .<= ''
+C2DA .=> phpCAS::forceAuthentication() [simple.php:19]
+C2DA .|    => CASClient::forceAuthentication() [CAS.php:893]
+C2DA .|    |    => CASClient::isAuthenticated() [client.php:869]
+C2DA .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+C2DA .|    |    |    |    no user found [client.php:1110]
+C2DA .|    |    |    <= false
+C2DA .|    |    |    PT `ST-5-SE9qamMLsOyfrNfiHf23-cas' is present [client.php:1005]
+C2DA .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+C2DA .|    |    |    |    => CASClient::getURL() [client.php:481]
+C2DA .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+C2DA .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+C2DA .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-5-SE9qamMLsOyfrNfiHf23-cas', '', NULL, NULL, NULL) [client.php:2536]
+8F9E .START phpCAS-1.1.3 ****************** [CAS.php:470]
+8F9E .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+8F9E .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+8F9E .|    |    Starting a new session [client.php:600]
+8F9E .|    <= ''
+8F9E .<= ''
+8F9E .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+8F9E .<= ''
+8F9E .=> phpCAS::forceAuthentication() [simple.php:19]
+8F9E .|    => CASClient::forceAuthentication() [CAS.php:893]
+8F9E .|    |    => CASClient::isAuthenticated() [client.php:869]
+8F9E .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+8F9E .|    |    |    |    no user found [client.php:1110]
+8F9E .|    |    |    <= false
+8F9E .|    |    |    no ticket found [client.php:1027]
+8F9E .|    |    <= false
+8F9E .|    |    => CASClient::redirectToCas(false) [client.php:878]
+8F9E .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+8F9E .|    |    |    |    => CASClient::getURL() [client.php:361]
+8F9E .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+8F9E .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+8F9E .|    |    |    <= 'https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+8F9E .|    |    |    Redirect to : https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+8F9E .|    |    |    exit()
+8F9E .|    |    |    -
+8F9E .|    |    -
+8F9E .|    -
+E1C9 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+E1C9 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+E1C9 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+E1C9 .|    |    Starting a new session [client.php:600]
+E1C9 .|    |    ST or PT 'ST-6-UNYJjydAGwsO5cMWS5WO-cas' found [client.php:677]
+E1C9 .|    <= ''
+E1C9 .<= ''
+E1C9 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+E1C9 .<= ''
+E1C9 .=> phpCAS::forceAuthentication() [simple.php:19]
+E1C9 .|    => CASClient::forceAuthentication() [CAS.php:893]
+E1C9 .|    |    => CASClient::isAuthenticated() [client.php:869]
+E1C9 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+E1C9 .|    |    |    |    no user found [client.php:1110]
+E1C9 .|    |    |    <= false
+E1C9 .|    |    |    PT `ST-6-UNYJjydAGwsO5cMWS5WO-cas' is present [client.php:1005]
+E1C9 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+E1C9 .|    |    |    |    => CASClient::getURL() [client.php:481]
+E1C9 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+E1C9 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+E1C9 .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas_server/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php&ticket=ST-6-UNYJjydAGwsO5cMWS5WO-cas', '', NULL, NULL, NULL) [client.php:2536]
+8BC2 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+8BC2 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas_server') [simple.php:13]
+8BC2 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas_server', true) [CAS.php:373]
+8BC2 .|    |    Starting a new session [client.php:600]
+8BC2 .|    <= ''
+8BC2 .<= ''
+8BC2 .=> phpCAS::setNoCasServerValidation() [simple.php:16]
+8BC2 .<= ''
+8BC2 .=> phpCAS::forceAuthentication() [simple.php:19]
+8BC2 .|    => CASClient::forceAuthentication() [CAS.php:893]
+8BC2 .|    |    => CASClient::isAuthenticated() [client.php:869]
+8BC2 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+8BC2 .|    |    |    |    no user found [client.php:1110]
+8BC2 .|    |    |    <= false
+8BC2 .|    |    |    no ticket found [client.php:1027]
+8BC2 .|    |    <= false
+8BC2 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+8BC2 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+8BC2 .|    |    |    |    => CASClient::getURL() [client.php:361]
+8BC2 .|    |    |    |    |    Final URI: http://localhost/cas_client/simple.php [client.php:2685]
+8BC2 .|    |    |    |    <= 'http://localhost/cas_client/simple.php'
+8BC2 .|    |    |    <= 'https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php'
+8BC2 .|    |    |    Redirect to : https://www.test.com:8043/cas_server/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2Fsimple.php
+8BC2 .|    |    |    exit()
+8BC2 .|    |    |    -
+8BC2 .|    |    -
+8BC2 .|    -
+6739 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+6739 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+6739 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+6739 .|    |    Starting a new session [client.php:600]
+6739 .|    <= ''
+6739 .<= ''
+6739 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+6739 .<= ''
+6739 .=> phpCAS::forceAuthentication() [index.php:19]
+6739 .|    => CASClient::forceAuthentication() [CAS.php:893]
+6739 .|    |    => CASClient::isAuthenticated() [client.php:869]
+6739 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+6739 .|    |    |    |    no user found [client.php:1110]
+6739 .|    |    |    <= false
+6739 .|    |    |    no ticket found [client.php:1027]
+6739 .|    |    <= false
+6739 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+6739 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+6739 .|    |    |    |    => CASClient::getURL() [client.php:361]
+6739 .|    |    |    |    |    Final URI: http://localhost/cas_client/ [client.php:2685]
+6739 .|    |    |    |    <= 'http://localhost/cas_client/'
+6739 .|    |    |    <= 'https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2F'
+6739 .|    |    |    Redirect to : https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2F
+6739 .|    |    |    exit()
+6739 .|    |    |    -
+6739 .|    |    -
+6739 .|    -
+8743 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+8743 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+8743 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+8743 .|    |    Starting a new session [client.php:600]
+8743 .|    |    ST or PT 'ST-6-zDKm6j4JdhwGgp1Hcnob-cas' found [client.php:677]
+8743 .|    <= ''
+8743 .<= ''
+8743 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+8743 .<= ''
+8743 .=> phpCAS::forceAuthentication() [index.php:19]
+8743 .|    => CASClient::forceAuthentication() [CAS.php:893]
+8743 .|    |    => CASClient::isAuthenticated() [client.php:869]
+8743 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+8743 .|    |    |    |    no user found [client.php:1110]
+8743 .|    |    |    <= false
+8743 .|    |    |    PT `ST-6-zDKm6j4JdhwGgp1Hcnob-cas' is present [client.php:1005]
+8743 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+8743 .|    |    |    |    => CASClient::getURL() [client.php:481]
+8743 .|    |    |    |    |    Final URI: http://localhost/cas_client/ [client.php:2685]
+8743 .|    |    |    |    <= 'http://localhost/cas_client/'
+8743 .|    |    |    |    => CASClient::readURL('https://www.test.com:8043/cas-server-3.3.3/proxyValidate?service=http%3A%2F%2Flocalhost%2Fcas_client%2F&ticket=ST-6-zDKm6j4JdhwGgp1Hcnob-cas', '', NULL, NULL, NULL) [client.php:2536]
+8743 .|    |    |    |    <= true
+8743 .|    |    |    |    => CASClient::renameSession('ST-6-zDKm6j4JdhwGgp1Hcnob-cas') [client.php:2599]
+8743 .|    |    |    |    |    Session ID: ST6zDKm6j4JdhwGgp1Hcnobcas [client.php:738]
+8743 .|    |    |    |    |    Restoring old session vars [client.php:741]
+8743 .|    |    |    |    <= ''
+8743 .|    |    |    <= true
+8743 .|    |    |    PT `ST-6-zDKm6j4JdhwGgp1Hcnob-cas' was validated [client.php:1007]
+8743 .|    |    |    => CASClient::getURL() [client.php:1033]
+8743 .|    |    |    <= 'http://localhost/cas_client/'
+8743 .|    |    |    => CASClient::getURL() [client.php:1034]
+8743 .|    |    |    <= 'http://localhost/cas_client/'
+8743 .|    |    |    Prepare redirect to : http://localhost/cas_client/
+8743 .|    |    |    exit()
+8743 .|    |    |    -
+8743 .|    |    -
+8743 .|    -
+C72E .START phpCAS-1.1.3 ****************** [CAS.php:470]
+C72E .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+C72E .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+C72E .|    |    Starting a new session [client.php:600]
+C72E .|    <= ''
+C72E .<= ''
+C72E .=> phpCAS::setNoCasServerValidation() [index.php:16]
+C72E .<= ''
+C72E .=> phpCAS::forceAuthentication() [index.php:19]
+C72E .|    => CASClient::forceAuthentication() [CAS.php:893]
+C72E .|    |    => CASClient::isAuthenticated() [client.php:869]
+C72E .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+C72E .|    |    |    |    user = `zhu' [client.php:1107]
+C72E .|    |    |    <= true
+C72E .|    |    |    user was already authenticated, no need to look for tickets [client.php:985]
+C72E .|    |    <= true
+C72E .|    |    no need to authenticate [client.php:871]
+C72E .|    <= true
+C72E .|    no need to authenticate (user `zhu' is already authenticated) [CAS.php:909]
+C72E .<= ''
+B828 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+B828 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+B828 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+B828 .|    |    Starting a new session [client.php:600]
+B828 .|    <= ''
+B828 .<= ''
+B828 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+B828 .<= ''
+B828 .=> phpCAS::forceAuthentication() [index.php:19]
+B828 .|    => CASClient::forceAuthentication() [CAS.php:893]
+B828 .|    |    => CASClient::isAuthenticated() [client.php:869]
+B828 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+B828 .|    |    |    |    user = `zhu' [client.php:1107]
+B828 .|    |    |    <= true
+B828 .|    |    |    user was already authenticated, no need to look for tickets [client.php:985]
+B828 .|    |    <= true
+B828 .|    |    no need to authenticate [client.php:871]
+B828 .|    <= true
+B828 .|    no need to authenticate (user `zhu' is already authenticated) [CAS.php:909]
+B828 .<= ''
+B828 .=> phpCAS::logout() [index.php:26]
+B828 .|    => CASClient::logout(array ()) [CAS.php:1200]
+B828 .|    |    Prepare redirect to : https://www.test.com:8043/cas-server-3.3.3/logout
+B828 .|    |    exit()
+B828 .|    |    -
+B828 .|    -
+F351 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+F351 .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+F351 .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+F351 .|    <= ''
+F351 .<= ''
+F351 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+F351 .<= ''
+F351 .=> phpCAS::forceAuthentication() [index.php:19]
+F351 .|    => CASClient::forceAuthentication() [CAS.php:893]
+F351 .|    |    => CASClient::isAuthenticated() [client.php:869]
+F351 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+F351 .|    |    |    |    no user found [client.php:1110]
+F351 .|    |    |    <= false
+F351 .|    |    |    no ticket found [client.php:1027]
+F351 .|    |    <= false
+F351 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+F351 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+F351 .|    |    |    |    => CASClient::getURL() [client.php:361]
+F351 .|    |    |    |    |    Final URI: http://localhost/cas_client/ [client.php:2685]
+F351 .|    |    |    |    <= 'http://localhost/cas_client/'
+F351 .|    |    |    <= 'https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2F'
+F351 .|    |    |    Redirect to : https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2Flocalhost%2Fcas_client%2F
+F351 .|    |    |    exit()
+F351 .|    |    |    -
+F351 .|    |    -
+F351 .|    -
+A2FF .START phpCAS-1.1.3 ****************** [CAS.php:470]
+A2FF .=> phpCAS::client('2.0', 'www.test.com', 8043, 'cas-server-3.3.3') [index.php:13]
+A2FF .|    => CASClient::CASClient('2.0', false, 'www.test.com', 8043, 'cas-server-3.3.3', true) [CAS.php:373]
+A2FF .|    |    Starting a new session [client.php:600]
+A2FF .|    <= ''
+A2FF .<= ''
+A2FF .=> phpCAS::setNoCasServerValidation() [index.php:16]
+A2FF .<= ''
+A2FF .=> phpCAS::forceAuthentication() [index.php:19]
+A2FF .|    => CASClient::forceAuthentication() [CAS.php:893]
+A2FF .|    |    => CASClient::isAuthenticated() [client.php:869]
+A2FF .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+A2FF .|    |    |    |    no user found [client.php:1110]
+A2FF .|    |    |    <= false
+A2FF .|    |    |    no ticket found [client.php:1027]
+A2FF .|    |    <= false
+A2FF .|    |    => CASClient::redirectToCas(false) [client.php:878]
+A2FF .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+A2FF .|    |    |    |    => CASClient::getURL() [client.php:361]
+A2FF .|    |    |    |    |    Final URI: http://127.0.0.1/cas_client/ [client.php:2685]
+A2FF .|    |    |    |    <= 'http://127.0.0.1/cas_client/'
+A2FF .|    |    |    <= 'https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2F127.0.0.1%2Fcas_client%2F'
+A2FF .|    |    |    Redirect to : https://www.test.com:8043/cas-server-3.3.3/login?service=http%3A%2F%2F127.0.0.1%2Fcas_client%2F
+A2FF .|    |    |    exit()
+A2FF .|    |    |    -
+A2FF .|    |    -
+A2FF .|    -
+48F3 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+48F3 .=> phpCAS::client('2.0', 'cas.gzhu.edu.cn', 443, 'cas_server') [index.php:13]
+48F3 .|    => CASClient::CASClient('2.0', false, 'cas.gzhu.edu.cn', 443, 'cas_server', true) [CAS.php:373]
+48F3 .|    |    Starting a new session [client.php:600]
+48F3 .|    <= ''
+48F3 .<= ''
+48F3 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+48F3 .<= ''
+48F3 .=> phpCAS::forceAuthentication() [index.php:19]
+48F3 .|    => CASClient::forceAuthentication() [CAS.php:893]
+48F3 .|    |    => CASClient::isAuthenticated() [client.php:869]
+48F3 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+48F3 .|    |    |    |    no user found [client.php:1110]
+48F3 .|    |    |    <= false
+48F3 .|    |    |    no ticket found [client.php:1027]
+48F3 .|    |    <= false
+48F3 .|    |    => CASClient::redirectToCas(false) [client.php:878]
+48F3 .|    |    |    => CASClient::getServerLoginURL(false, false) [client.php:1127]
+48F3 .|    |    |    |    => CASClient::getURL() [client.php:361]
+48F3 .|    |    |    |    |    Final URI: http://127.0.0.1/cas_client/ [client.php:2685]
+48F3 .|    |    |    |    <= 'http://127.0.0.1/cas_client/'
+48F3 .|    |    |    <= 'https://cas.gzhu.edu.cn/cas_server/login?service=http%3A%2F%2F127.0.0.1%2Fcas_client%2F'
+48F3 .|    |    |    Redirect to : https://cas.gzhu.edu.cn/cas_server/login?service=http%3A%2F%2F127.0.0.1%2Fcas_client%2F
+48F3 .|    |    |    exit()
+48F3 .|    |    |    -
+48F3 .|    |    -
+48F3 .|    -
+8DD7 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+8DD7 .=> phpCAS::client('2.0', 'cas.gzhu.edu.cn', 443, 'cas_server') [index.php:13]
+8DD7 .|    => CASClient::CASClient('2.0', false, 'cas.gzhu.edu.cn', 443, 'cas_server', true) [CAS.php:373]
+8DD7 .|    |    Starting a new session [client.php:600]
+8DD7 .|    |    ST or PT 'ST-17452-k5EDXYRopRnY6waz5OTF-cas.gzhu.edu.cn' found [client.php:677]
+8DD7 .|    <= ''
+8DD7 .<= ''
+8DD7 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+8DD7 .<= ''
+8DD7 .=> phpCAS::forceAuthentication() [index.php:19]
+8DD7 .|    => CASClient::forceAuthentication() [CAS.php:893]
+8DD7 .|    |    => CASClient::isAuthenticated() [client.php:869]
+8DD7 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+8DD7 .|    |    |    |    no user found [client.php:1110]
+8DD7 .|    |    |    <= false
+8DD7 .|    |    |    PT `ST-17452-k5EDXYRopRnY6waz5OTF-cas.gzhu.edu.cn' is present [client.php:1005]
+8DD7 .|    |    |    => CASClient::validatePT('', NULL, NULL) [client.php:1006]
+8DD7 .|    |    |    |    => CASClient::getURL() [client.php:481]
+8DD7 .|    |    |    |    |    Final URI: http://127.0.0.1/cas_client/ [client.php:2685]
+8DD7 .|    |    |    |    <= 'http://127.0.0.1/cas_client/'
+8DD7 .|    |    |    |    => CASClient::readURL('https://cas.gzhu.edu.cn/cas_server/proxyValidate?service=http%3A%2F%2F127.0.0.1%2Fcas_client%2F&ticket=ST-17452-k5EDXYRopRnY6waz5OTF-cas.gzhu.edu.cn', '', NULL, NULL, NULL) [client.php:2536]
+8DD7 .|    |    |    |    <= true
+8DD7 .|    |    |    |    => CASClient::renameSession('ST-17452-k5EDXYRopRnY6waz5OTF-cas.gzhu.edu.cn') [client.php:2599]
+8DD7 .|    |    |    |    |    Session ID: ST17452k5EDXYRopRnY6waz5OTFcasgzhueducn [client.php:738]
+8DD7 .|    |    |    |    |    Restoring old session vars [client.php:741]
+8DD7 .|    |    |    |    <= ''
+8DD7 .|    |    |    <= true
+8DD7 .|    |    |    PT `ST-17452-k5EDXYRopRnY6waz5OTF-cas.gzhu.edu.cn' was validated [client.php:1007]
+8DD7 .|    |    |    => CASClient::getURL() [client.php:1033]
+8DD7 .|    |    |    <= 'http://127.0.0.1/cas_client/'
+8DD7 .|    |    |    => CASClient::getURL() [client.php:1034]
+8DD7 .|    |    |    <= 'http://127.0.0.1/cas_client/'
+8DD7 .|    |    |    Prepare redirect to : http://127.0.0.1/cas_client/
+8DD7 .|    |    |    exit()
+8DD7 .|    |    |    -
+8DD7 .|    |    -
+8DD7 .|    -
+6A58 .START phpCAS-1.1.3 ****************** [CAS.php:470]
+6A58 .=> phpCAS::client('2.0', 'cas.gzhu.edu.cn', 443, 'cas_server') [index.php:13]
+6A58 .|    => CASClient::CASClient('2.0', false, 'cas.gzhu.edu.cn', 443, 'cas_server', true) [CAS.php:373]
+6A58 .|    |    Starting a new session [client.php:600]
+6A58 .|    <= ''
+6A58 .<= ''
+6A58 .=> phpCAS::setNoCasServerValidation() [index.php:16]
+6A58 .<= ''
+6A58 .=> phpCAS::forceAuthentication() [index.php:19]
+6A58 .|    => CASClient::forceAuthentication() [CAS.php:893]
+6A58 .|    |    => CASClient::isAuthenticated() [client.php:869]
+6A58 .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+6A58 .|    |    |    |    user = `0303242121' [client.php:1107]
+6A58 .|    |    |    <= true
+6A58 .|    |    |    user was already authenticated, no need to look for tickets [client.php:985]
+6A58 .|    |    <= true
+6A58 .|    |    no need to authenticate [client.php:871]
+6A58 .|    <= true
+6A58 .|    no need to authenticate (user `0303242121' is already authenticated) [CAS.php:909]
+6A58 .<= ''
+E4BE .START phpCAS-1.1.3 ****************** [CAS.php:470]
+E4BE .=> phpCAS::client('2.0', 'cas.gzhu.edu.cn', 443, 'cas_server') [index.php:13]
+E4BE .|    => CASClient::CASClient('2.0', false, 'cas.gzhu.edu.cn', 443, 'cas_server', true) [CAS.php:373]
+E4BE .|    |    Starting a new session [client.php:600]
+E4BE .|    <= ''
+E4BE .<= ''
+E4BE .=> phpCAS::setNoCasServerValidation() [index.php:16]
+E4BE .<= ''
+E4BE .=> phpCAS::forceAuthentication() [index.php:19]
+E4BE .|    => CASClient::forceAuthentication() [CAS.php:893]
+E4BE .|    |    => CASClient::isAuthenticated() [client.php:869]
+E4BE .|    |    |    => CASClient::wasPreviouslyAuthenticated() [client.php:974]
+E4BE .|    |    |    |    user = `0303242121' [client.php:1107]
+E4BE .|    |    |    <= true
+E4BE .|    |    |    user was already authenticated, no need to look for tickets [client.php:985]
+E4BE .|    |    <= true
+E4BE .|    |    no need to authenticate [client.php:871]
+E4BE .|    <= true
+E4BE .|    no need to authenticate (user `0303242121' is already authenticated) [CAS.php:909]
+E4BE .<= ''
+E4BE .=> phpCAS::logout() [index.php:26]
+E4BE .|    => CASClient::logout(array ()) [CAS.php:1200]
+E4BE .|    |    Prepare redirect to : https://cas.gzhu.edu.cn/cas_server/logout
+E4BE .|    |    exit()
+E4BE .|    |    -
+E4BE .|    -

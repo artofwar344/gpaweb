@@ -1,0 +1,110 @@
+<h2>包含组件</h2>
+<div class="product_office2013_assembly">
+	<ul>
+		<li>Word</li>
+		<li class="excel">Excel</li>
+		<li class="ppt">PowerPoint</li>
+		<li class="onenote">OneNote</li>
+		<li class="outlook">Outlook</li>
+		<li class="publisher">Publisher</li>
+		<li class="access">Access</li>
+		<li class="infopath">InfoPath</li>
+		<li class="lync">Lync</li>
+	</ul>
+</div>
+<h2>使用 Office更便捷地工作</h2>
+<div class="product_office2013_info">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/introduction_1.jpg'; ?>">
+	<p>最适合那些希望在一台 Windows PC 上拥有完整 Office 程序的用户专业标准在不断发展。升级到最新洁、时尚的界面，帮助您更快地创建内容和进行通信。此外，还可将文档联机保存在 SkyDrive 中以便可以从几乎任何位置进行访问。</p>
+	<div class="clear"></div>
+</div>
+<h3>简化共享方式</h3>
+<div class="product_office2013_info">
+	<ul>
+		<li>使用免费的 Office Web Apps，在任何具有 Internet 连接的设备上访问、编辑和共享文档</li>
+		<li>使用 Outlook 中全套的电子邮件、日程安排和任务列表工具装备自己</li>
+		<li>无需切换屏幕，即可在 Outlook 中一目了然地查看约会、电子邮件或联系人详细信息</li>
+		<li>使用 OneNote 捕获、整理和共享所有类型的信息</li>
+	</ul>
+</div>
+<h3>您的个性化 Office</h3>
+<div class="product_office2013_info">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/introduction_2.jpg'; ?>">
+	<ul>
+		<li>最新版本的 Word、Excel、PowerPoint、OneNote、Outlook、Access 和 Publisher，每次都按您的方式进行个性化</li>
+		<li>文档将自动保存至 SkyDrive，以便轻松在线访问和共享</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h2>Office 2013 中的新增功能</h2>
+<div class="product_video" style="height:387px; margin-bottom:10px">
+	<iframe width="700" height="387" frameborder="0" marginwidth="0" marginheight='0' scrolling="no" src="http://hub.video.msn.com/embed/066b2ade-53c8-43c4-9776-f3f1236dbd97/?vars=bWt0PXpoLWNuJmNvbmZpZ05hbWU9c3luZGljYXRpb25wbGF5ZXImc3luZGljYXRpb249dGFnJmxpbmtvdmVycmlkZTI9aHR0cCUzQSUyRiUyRm9mZmljZS5taWNyb3NvZnQuY29tJTJGemgtY24lMkZzdXBwb3J0JTJGSEExMDI4MzAyMTMuYXNweCUzRnZpZGVvSWQlM0QlN0IwJTdEJTI2ZnJvbSUzRCZsaW5rYmFjaz1odHRwJTNBJTJGJTJGdmlkZW8uY24ubXNuLmNvbSUyRiZmcj1zaGFyZWVtYmVkLXN5bmRpY2F0aW9uJmNvbmZpZ0NzaWQ9TVNOVmlkZW8%3D">
+		<a href="http://office.microsoft.com/zh-cn/support/HA102830213.aspx?videoId=066b2ade-53c8-43c4-9776-f3f1236dbd97&from=shareembed-syndication&src=v5:embed:syndication:" target="_new" title="视频：Office 2013 中的新增功能">视频: 视频：Office 2013 中的新增功能</A>
+	</iframe>
+</div>
+<p>打开 Microsoft Office 时首先会看到简约的新外观。但是，您熟知的以及经常使用的功能仍保留在此处，另外，还引入了可大大节省时间的新增功能。新版 Office 还可以在智能手机、平板电脑和云中使用，甚至在未安装 Office 的 PC 上也能使用。因此，不管您身居何处，使用了什么设备，始终都能访问您的重要文件。</p>
+<h3 style="line-height:30px">1、随时随地登录 Office</h3>
+<div class="product_requirement">
+	<ul>
+		<li>使用 Microsoft 帐户安装 Office。</li>
+		<li>将 Office 程序以流的方式传输到另一台计算机。</li>
+		<li>将文件保存到 SkyDrive，以便轻松访问和共享。</li>
+		<li>随时随地保留个人设置。</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<div class="product_requirement">
+	<div class="product_video" style="height:387px; margin-bottom:10px">
+		<iframe width="700" height="387" frameborder="0" marginwidth="0" marginheight='0' scrolling="no" src="http://hub.video.msn.com/embed/4b18d261-c447-4d2c-9e5c-9ebcc7e47ae8/?vars=ZnI9c2hhcmVlbWJlZC1zeW5kaWNhdGlvbiZjb25maWdDc2lkPU1TTlZpZGVvJm1rdD16aC1jbiZjb25maWdOYW1lPXN5bmRpY2F0aW9ucGxheWVyJnN5bmRpY2F0aW9uPXRhZyZsaW5rb3ZlcnJpZGUyPWh0dHAlM0ElMkYlMkZvZmZpY2UubWljcm9zb2Z0LmNvbSUyRnpoLWNuJTJGc3VwcG9ydCUyRkhBMTAyODMwMjEzLmFzcHglM0Z2aWRlb0lkJTNEJTdCMCU3RCUyNmZyb20lM0QmbGlua2JhY2s9aHR0cCUzQSUyRiUyRnZpZGVvLmNuLm1zbi5jb20lMkY%3D">
+			<A href="http://office.microsoft.com/zh-cn/support/HA102830213.aspx?videoId=4b18d261-c447-4d2c-9e5c-9ebcc7e47ae8&from=shareembed-syndication&src=v5:embed:syndication:" target="_new" title="视频：充分利用 Office 订阅">视频: 视频：充分利用 Office 订阅</a></iframe>					</div>
+	<div class="clear"></div>
+</div>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_1.jpg'; ?>">
+	<ul>
+		<li>
+			您甚至不需要在自己的计算机面前即可使用 Office。只要您已连接到 Internet，就可以使用 Office on Demand 临时流式传输完整版本的 Word、Excel 、PowerPoint、Access 和 Publisher 到运行 Win 7（或更高版本）的 PC。这样，您可以创建文档或继续处理已保存到 SkyDrive 的文档。
+		</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h3>2、在云中保存和共享文件</h3>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_2.jpg'; ?>">
+	<ul>
+		<li>云就相当于天上的文件存储。每当您联机时，就可以访问云。现在，您可以轻松地将 Office 文件保存到自己的 SkyDrive 或组织的网站中。在这些位置，您可以访问和共享 Word 文档、Excel 电子表格和其他 Office 文件。您甚至还可以与同事共同处理同一个文件。</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h3>3、共享会议</h3>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_3.jpg'; ?>">
+	<ul>
+		<li>加入联机会议并共享 PowerPoint 幻灯片、Word 文档、Excel 电子表格和 OneNote 笔记。即使未安装 Office，与会者也可以查看这些文件。</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h3>4、更多入门选项</h3>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_4.jpg'; ?>">
+	<ul>
+		<li>现在您可以在最近的文件或最喜爱的模板（而不是一个空白文件）之间进行选择。在 OneNote 中，您可以从 Web 或本机登录和打开笔记本。</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h3>5、改进了“另存为”和“打开”功能</h3>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_5.jpg'; ?>">
+	<ul>
+		<li>再也无需在对话框中执行浏览和滚动操作。一开始就显示最常用的文件夹。也可固定某个位置，以便随时可用。</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+<h3>6、更容易共享文件</h3>
+<div class="product_win8 product_office2013">
+	<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/office_2013_skill_6.jpg'; ?>">
+	<ul>
+		<li>现在，Office 程序中的“文件”>“共享”在一个位置集中了用于与其他人共享文件的所有选项。</li>
+	</ul>
+	<div class="clear"></div>
+</div>

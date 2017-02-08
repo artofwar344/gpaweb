@@ -1,0 +1,31 @@
+<?php if(count($documents) > 0): ?>
+<div class="document_list">
+	<div class="header_5">
+		<span class="icon icon_category"></span><?php echo $title; ?>
+		<?php if (isset($url_more) && $url_more != null): ?>
+			<a class="more" href="<?php echo $url_more; ?>">更多</a>
+		<?php endif; ?>
+	</div>
+	<div class="content_wrap">
+		<div class="content">
+			<?php foreach ($documents as $document): ?>
+			<div class="document">
+				<a title="<?php echo $document->name; ?>" href="<?php echo '/document/detail?id=' . $document->documentid; ?>">
+					<span class="preview">
+						<span class="border">
+							<img src="<?php echo Ca\Service\DocumentService::thumbnail($document); ?>" alt="<?php echo $document->name; ?>"/>
+							<span class="icon icons_1 icons_<?php echo $document->extension; ?>"></span>
+							<?php if ($document->pages): ?>
+							<span class="pages"><?php echo $document->pages; ?>页</span>
+							<?php endif; ?>
+						</span>
+					</span>
+					<span class="name"><?php echo $document->name; ?></span>
+				</a>
+			</div>
+			<?php endforeach; ?>
+		</div>
+	</div>
+</div>
+<div class="spacer_1"></div>
+<?php endif; ?>

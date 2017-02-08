@@ -1,0 +1,27 @@
+<div class="frame_1 site_path">
+	当前位置：
+	<a href="/">首页</a> &gt;
+	软件搜索
+</div>
+<div class="frame_2">
+	<div class="frame_2_l software_list">
+		<?php foreach ($softs as $soft): ?>
+		<div class="software">
+			<a class="name" href="/soft/<?php echo $soft->softid; ?>.html">
+				<span style="background-image:url(<?php echo Ca\Service\SoftService::icon($soft->softid); ?>)"><?php echo $soft->name; ?> <?php echo $soft->version; ?></span>
+			</a>
+			<div class="intro"><?php echo $soft->description; ?></div>
+			<div class="info">
+				<?php echo Ca\Consts::$soft_licensetype_texts[$soft->licensetype]; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+				软件大小: <?php echo Ca\Common::format_filesize($soft->filesize); ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+				人气: <?php echo $soft->views; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+				更新: <?php echo $soft->updatedate; ?>&nbsp;&nbsp;|&nbsp;&nbsp;
+				运行环境: <?php echo $soft->platform; ?>
+			</div>
+		</div>
+		<?php endforeach; ?>
+		<?php echo $softs->links(); ?>
+	</div>
+	<?php echo $__env->make('soft.partials/slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<div class="clear"></div>
+</div>

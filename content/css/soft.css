@@ -1,0 +1,225 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}body{line-height:1}ol, ul{list-style:none}blockquote, q{quotes:none}blockquote:before, blockquote:after, q:before, q:after{content:''; content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse: collapse; border-spacing:0}
+.clear{clear:both !important; line-height:0 !important; height:0 !important; font-size:0 !important; margin:0 !important; padding:0 !important; float:none !important; overflow:hidden; }
+
+body{font-family:"微软雅黑", "arial"; font-size:12px; color:#414141}
+select, input{font-family:"微软雅黑", "arial"; font-size:12px}
+
+a{color:#414141; text-decoration:none}
+	/*a:hover{text-decoration:underline; color:#000}*/
+
+.orange{background:#ff8110 !important}	
+
+.frame_1{width:980px; margin:0 auto}
+.frame_1_l{width:320px; float:left; margin-top:5px}
+.frame_1_c{width:370px; float:left; margin:5px 0 0 10px}
+.frame_1_r{width:270px; float:right; margin-top:10px}
+
+.frame_2{width:980px; margin:0 auto; margin-bottom: 30px;}
+.frame_2_l{width:700px; float:left}
+.frame_2_r{width:270px; float:right}
+
+.header_1{font-size:18px; margin-bottom:10px; border-bottom:solid 2px #eee; height:30px; position:relative; font-weight:normal}
+	.header_1 span{display:inline-block; position:absolute; border-bottom:solid 2px #007aa8; padding-bottom:5px; bottom:-2px; left:0}
+	.header_1 .more{font-size:12px; position:absolute; right:0; top:10px; font-weight:normal}
+
+.header_1_a{font-weight:bold}
+
+.header_2{font-size:16px; border-bottom:solid 1px #fff; background:url(../images/soft/icons.png) no-repeat; padding:10px 10px 10px 30px; font-weight:normal}
+	.header_2_news{background-position:3px -42px}
+	.header_2_download{background-position:3px -131px}
+	.header_2_viewpoint{background-position:3px -169px}
+
+.header_3{font-size:16px; border-bottom:solid 1px #fff; background:url(../images/soft/icons.png) no-repeat; padding:10px 10px 10px 30px; font-weight:normal; position:relative}
+	.header_3 ul{position:absolute; right:0; top:0}
+	.header_3 ul li{float:left}
+		.header_3 ul li a{display:inline-block; height:36px; line-height:36px; padding:0 10px}
+			.header_3 ul li a.hot{background:#007aa8; color:#fff}
+	.header_3_download{background-position:3px -131px}
+
+.button_1{background:#007aa8 url(../images/soft/icons.png) no-repeat; color:#fff; padding:8px 20px 8px 35px}
+	.button_1:hover{color:#fff; background-color:#018cc1}
+	.button_1_download{background-position:5px 2px; font-size:16px}
+
+.block_1{background:#efefef}
+	.block_1 .header_2{}
+	.block_1 .content{padding:1px 10px}
+		.block_1 .content li{margin:10px 0; background:url(../images/soft/icons.png) no-repeat 0 -114px; padding-left:10px}
+
+.block_2{background:#efefef}
+	.block_2 .header_2{}
+	.block_2 .content{padding:1px 10px}
+		.block_2 .content li{margin:10px 0; background:url(../images/soft/icons.png) no-repeat 0 -114px; padding-left:10px; position:relative}
+			.block_2 .content li a span{color:#888; font-size:10px}
+			.block_2 .content li strong{position:absolute; right:0; top:1px; font-weight:normal; font-size:10px}
+
+.block_3{background:#efefef}
+	.block_3 .header_2{}
+	.block_3 .content{padding:10px}
+		.block_3 .content li{margin:10px 0; background:url(../images/soft/icons.png) no-repeat 0 -92px; padding-left:10px}
+
+.block_4{background:#efefef}
+	.block_4 .header_2{}
+	.block_4 .content{padding:0px 10px 1px 10px}
+
+.block_4_recommendation{}
+	.block_4_recommendation ul{}
+	.block_4_recommendation li{padding-bottom:5px; padding-top: 5px; font-size:14px; border-bottom:dotted 1px #aaa}
+		.block_4_recommendation li:last-child{border:none}
+		.block_4_recommendation li a{display:block; padding:10px 0 10px 25px; background:no-repeat 0 9px}
+		.block_4_recommendation li a:hover{background-color: #007aa8;}
+			.block_4_recommendation li a span{font-size:10px; display:block; margin-top:7px}
+
+.block_3_viewpoint{margin-top:10px}
+	.block_3_viewpoint .content h2{font-size:14px; margin-bottom:10px}
+		.block_3_viewpoint .content h2 .label{background:#f16149; color:#fff; padding:2px 5px; font-size:12px}
+	.block_3_viewpoint .content .detail{line-height:18px}
+		.block_3_viewpoint .content .detail a{text-decoration:underline}
+			.block_3_viewpoint .content .detail a:hover{text-decoration:none}
+
+.splitter_1{height:10px; line-height:0; font-size:0}
+
+.ad_1{margin-top:10px}
+	.ad_1 a{display:inline-block}
+
+.header_main{padding:10px 0}
+	.header_main .logo{width:290px; height:55px; background:url(../images/soft/logo.gif) no-repeat; float:left}
+	.header_main .search{float:right; margin-top:10px}
+		.header_main .search .text_box{width:400px; height:30px; border:#1570a6 solid 2px; line-height:30px; padding:0 0 0 30px; float:left; background:url(../images/soft/icons.jpg) no-repeat 5px 5px;}
+		.header_main .search a{float:left; background:#1570a6; display:block; padding:0 20px; color:#fff; height:34px; line-height:34px; font-size:14px}
+		.header_main .search a:hover{text-decoration:none}
+	.header_main .sign_in{float:right}
+		.header_main .sign_in span{display:block; line-height:20px}
+			.header_main .sign_in span a{font-size:12px; font-weight:bold; margin-left:10px}
+			.header_main .sign_in .collection{width:77px; height:22px; float:right; background:url(../images/soft/button.gif) no-repeat; display:block; margin-top:10px}
+			.header_main .sign_in .customer_service{width:77px; height:22px; float:right; background:url(../images/soft/button.gif) no-repeat 0 -27px; display:block; margin-top:10px; margin-left:10px}
+
+.main_menu{background:#00384a; font-size:14px}
+	.main_menu li{float:left}
+		.main_menu li a{color:#fff; padding:13px 30px; display:inline-block}
+		.main_menu li a:hover{background:#007aa8; text-decoration:none}
+	.main_menu .home{background:#95d54b}
+		.main_menu .home:hover{}
+
+.viewpoint_main .content{border-top:1px solid #e0e0e0; padding:10px}
+	.viewpoint_main .content .hot{background:#73b720; color:#fff; margin-right:10px}
+	.viewpoint_main .content h2{color:#000; font-size:14px}
+	.viewpoint_main .content p{float:left; margin-top:10px; line-height:22px}
+	.viewpoint_main .content p img{float:left; padding-right:10px}
+	.viewpoint_main .content li a{line-height:22px; background:url(../images/soft/icons.jpg) no-repeat 0 -105px; padding-left:10px}
+				
+.download_main{margin-top:10px}
+	.download_main .content ul{}
+	.download_main .content ul li{line-height:25px; position:relative}
+	.download_main .content ul a{background:none !important; margin-left:25px}
+	.download_main .content ul .version{font-size:10px; color:#888}
+	.download_main .content ul .index{background:#888; width:18px; display:block; position:absolute; top:2px; line-height:18px; text-align:center; margin-right:10px ; margin-top:2px; color:#fff}
+		.download_main .content ul li.index_1{font-size:14px}
+			.download_main .content ul li.index_1 .index{background:#f16149; width:22px; height:22px; top:0; margin-right:15px}
+			.download_main .content ul li.index_1 a{margin-left:30px}
+		.download_main .content ul li.index_2{font-size:14px}
+			.download_main .content ul li.index_2 .index{background:#95d54b; width:22px; height:22px; top:0; margin-right:15px}
+			.download_main .content ul li.index_2 a{margin-left:30px}
+		.download_main .content ul li.index_3{font-size:14px}
+			.download_main .content ul li.index_3 .index{background:#007aa8; width:22px; height:22px; top:0; margin-right:15px}
+			.download_main .content ul li.index_3 a{margin-left:30px}
+
+.software_new{}
+	.software_new li{line-height:25px; font-size:14px; position:relative; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+		.software_new li .category{width:80px; display:inline-block}
+			.software_new li .category a{color:#007aa8}
+				.software_new li a.name span{font-size:10px; color:#888}
+		.software_new li em{position:absolute; right:0; font-size:12px; font-style:normal; background:#fff; padding-left:5px}
+
+.news_main{}
+	.news_main h2{margin:10px 0}
+		.news_main h2 a{font-size:18px; color:#f16149; font-weight:normal}
+	.news_main li{background:url(../images/soft/icons.png) no-repeat 0 -107px; padding-left:10px}
+
+.news_list{}
+	.news_list ul{line-height:20px; width:340px}
+	.news_list li{background:url("../images/soft/icons.png") no-repeat 0 -110px; padding-left:10px; margin:10px 0}
+	.news_list .box_l{float:left}
+	.news_list .box_r{float:right}
+		
+.pc_essential{}
+	.pc_essential .group{float:left}
+		.pc_essential .group_even{margin-left:10px}
+	.pc_essential h2{background:#4bc1ed; color:#fff; float:left; font-weight:normal; height:102px; line-height:20px; padding-top:20px; text-align:center; width:25px; font-size:14px}
+	.pc_essential ul.column{border:1px dotted #ccc; float:left; height:120px; margin-bottom:10px; margin-left:5px; width:126px}
+		.pc_essential ul li{height:25px; margin-top:4px; position:relative}
+			.pc_essential ul li img{width:20px; height:20px; margin-left:5px; position:absolute; top:2px; left:0}
+			.pc_essential ul li span{font-size:12px; height:25px; margin-left:30px; line-height:25px; width:95px; display:block; overflow:hidden; white-space:nowrap}
+
+.main_footer{background:#eee url(../images/soft/footer_logo.png) no-repeat 20px 20px; margin-top:10px; padding:40px 10px 80px 10px; line-height:20px; width:960px}
+.main_footer p{margin-left:140px}
+
+.site_path{line-height:30px; margin-top:5px}
+
+.download_info{}
+	.download_info .name{padding:5px}
+		.download_info .name h1{font-size:22px; background:no-repeat 0 7px; padding:10px 0 10px 40px; font-weight:normal}
+		.download_info .name span{background-attachment: scroll;background-clip: border-box;background-color: rgba(0, 0, 0, 0);	background-image: none;	background-origin: padding-box;	background-position-x: 5px;
+			background-position-y: center;
+			background-repeat: no-repeat;
+			background-size: auto auto;
+			display: inline-block;
+			padding-bottom: 13px;
+			padding-left: 62px;
+			padding-right: 20px;
+			padding-top: 19px;
+			font-size: 16px;
+		}
+	.download_info ul{}
+	.download_info li{margin-top:10px; width:300px; display:inline-block}
+		.download_info li span{color:#007aa8; font-weight:bold; margin-right:10px; display:inline-block}
+
+.download_share{margin:10px 0}
+		
+.download_intro{}
+	.download_intro .intro{margin:20px 0; line-height:18px}
+		.download_intro .intro a{text-decoration:underline}
+			.download_intro .intro a:hover{text-decoration:none}
+	
+.download_links{}
+	.download_links .links{padding:15px 0}
+
+.software_list{}
+	.software_list .software{margin-bottom:10px}
+		.software_list .software .name{font-size:16px; display:block}
+			.software_list .software .name span{background: no-repeat 5px center; padding:19px 20px 13px 62px; display:inline-block}
+			.software_list .software .name:hover span{background-color:#4bc1ed; color:#fff}
+		.software_list .software .intro{color:#333333;margin:15px 0px 5px;font-family:arial, 宋体, sans-serif;font-size:14px;background-color:#FFFFFF; line-height: 22px;}
+			.software_list .software .intro a{color:#666; text-decoration:underline}
+				.software_list .software .intro a:hover{text-decoration:none}
+		.software_list .software .info{padding:5px; margin-top:10px}
+
+.news_detail{
+	padding: 0 10px 0px 0px;
+}
+	.news_detail h1{font-size:22px; font-weight:normal; margin-bottom:10px}
+	.news_detail .info{margin-bottom:20px; color:#888; margin-top: 20px; text-align: center;}
+	.news_detail .content, .news_detail .content p{line-height:25px}
+	.news_detail h1{text-align: center;}
+
+.pagination{margin:20px 0}
+	.pagination .dots a{border:none !important; cursor:default; text-decoration:none}
+	.pagination li{display:inline}
+	.pagination li.active{display:inline}
+	.pagination a{border:1px solid #f0f0f0; margin-left:10px; padding:6px; display:inline-block}
+		.pagination li.active a, .pagination a:hover{border:1px solid #888; color:#000; font-weight:bold}
+	.pagination .disabled a{color:#ccc}
+
+.download_recommend{}
+	.download_recommend .software{width:170px; float:left}
+		.download_recommend .software a{background-attachment: scroll;background-clip: border-box;background-color: rgba(0, 0, 0, 0);	background-image: none;	background-origin: padding-box;	background-position-x: 5px;
+			background-position-y: center;
+			background-repeat: no-repeat;
+			background-size: auto auto;
+			display: inline-block;
+			padding-bottom: 13px;
+			padding-left: 62px;
+			padding-right: 20px;
+			padding-top: 19px;
+			font-size: 16px;}
+			.download_recommend .software a:hover{text-decoration:none}
+			.download_recommend .software a span{display:block; font-size:12px; margin-top:3px; color:#888}

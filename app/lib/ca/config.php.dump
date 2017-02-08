@@ -1,0 +1,24 @@
+<?php
+
+define('DEFAULT_MYSQL_HOST', 'localhost');
+define('DEFAULT_MYSQL_PORT', '3306');
+define('DEFAULT_MYSQL_USER', 'public');
+define('DEFAULT_MYSQL_PASS', 'ntu_Mysql@123');
+
+
+$environments = array(
+	'ntu.gpa.edu.cn' => array('*ntu.gpa.edu.cn')
+);
+
+$customer_alias = array(
+	'ntu.gpa.edu.cn' => 'ntu'
+);
+
+$customer_name = array(
+	'ntu.gpa.edu.cn' => '南通大学'
+);
+
+
+$customer_securekey = array(
+	'ntu.gpa.edu.cn'      => 'G7Ktya42KFq1XefypaSfuuuFKtD17MuFKtDD'
+);

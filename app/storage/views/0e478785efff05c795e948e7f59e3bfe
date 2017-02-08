@@ -1,0 +1,53 @@
+<div class="main_banner"><img src="<?php echo Config::get('app.asset_url'); ?>images/share/banner.jpg" /></div>
+<div class="spacer_1"></div>
+<div class="frame_1">
+	<div class="frame_1_l">
+		<h1 class="header_1"><span>推荐文档</span></h1>
+		<div class="recommend_document">
+			<div class="document_list">
+				<div class="content_wrap">
+					<div class="content">
+						<?php foreach ($recommended_document as $document): ?>
+						<div class="document document_2">
+							<a title="<?php echo $document->name; ?>" href="<?php echo '/document/detail?id=' . $document->documentid; ?>">
+							<span class="preview" style="background-image:url('<?php echo \Ca\Service\DocumentService::thumbnail($document); ?>')">
+								<span class="border">
+									<span class="icon icons_1 icons_<?php echo $document->extension; ?>"></span>
+									<?php if ($document->pages): ?>
+									<span class="pages"><?php echo $document->pages; ?>页</span>
+									<?php endif; ?>
+								</span>
+							</span>
+							<span class="name"><?php echo $document->name; ?></span>
+							</a>
+						</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<?php echo \Ca\Service\AdService::show('750w_ad1', 1, 'ad_1'); ?>
+		<div class="spacer_1"></div>
+		<h1 class="header_1"><span>热门资源</span></h1>
+		<?php foreach ($data as $value): ?>
+			<?php echo $__env->make('share.partials.document.list1', $value, array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+			<?php if ($value['title'] == '课件专区'): ?>
+			<?php echo \Ca\Service\AdService::show('750w_ad2', 1, 'ad_1'); ?>
+			<?php endif; ?>
+			<?php if ($value['title'] == '专业资料'): ?>
+			<?php echo \Ca\Service\AdService::show('750w_ad3', 1, 'ad_1'); ?>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</div>
+
+	<div class="frame_1_r">
+		<?php echo \Ca\Service\AdService::show('210w_ad1', 1, 'ad_1'); ?>
+		<?php echo $__env->make('share.partials.side.document_rank', array('documents' => $hot_document, 'rankTitle' => '文档排行榜'), array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<div class="spacer_1"></div>
+		<?php echo \Ca\Service\AdService::show('210w_ad2', 1, 'ad_1'); ?>
+		<?php echo $__env->make ('share.partials.side.knows_rank', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<div class="spacer_1"></div>
+		<?php echo $__env->make ('share.partials.side.meeting_hot', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+	<div class="clear"></div>
+</div>

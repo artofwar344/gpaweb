@@ -1,0 +1,34 @@
+<div class="frame_1 site_path">
+	当前位置：
+	<a href="/">首页</a> &gt;
+	<a href="/news">新闻</a></div>
+		
+<div class="frame_2">
+
+	<div class="frame_2_l">
+		<?php foreach ($articles as $article): ?>
+		<div class="news_list">
+			<h1 class="header_1 header_1_a"><span><?php echo $article['category_name']; ?></span></h1>
+			<ul class="box_l">
+				<?php foreach ($article['results'] as $key => $result): ?>
+				<?php if ($key % 2 == 0): ?>
+				<li><a href="/news/<?php echo $result->articleid; ?>.html"><?php echo $result->title; ?></a></li>
+				<?php endif; ?>
+				<?php endforeach; ?>
+			</ul>
+			<ul class="box_r">
+				<?php foreach ($article['results'] as $key => $result): ?>
+				<?php if ($key % 2 == 1): ?>
+				<li><a href="/news/<?php echo $result->articleid; ?>.html"><?php echo $result->title; ?></a></li>
+				<?php endif; ?>
+				<?php endforeach; ?>
+			</ul>
+			<div class="clear"></div>
+		</div>
+		<?php endforeach; ?>
+	</div>
+	<div class="frame_2_r">
+		<?php echo $__env->make('soft.partials.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+	<div class="clear"></div>
+</div>

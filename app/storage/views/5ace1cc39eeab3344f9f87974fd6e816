@@ -1,0 +1,40 @@
+<div class="frame_1">
+	<div class="frame_1 main_header">
+		<?php if(App::make('customer')->alias == 'ccnu'): ?>
+
+		<div class="account" style="color:#666666">
+			<?php echo HtmlExt::headerLogin(); ?>
+		</div>
+		<?php else: ?>
+		<div class="account">
+			<?php echo HtmlExt::headerLogin(); ?>
+		</div>
+		<?php endif; ?>
+		
+		<?php if(App::make('customer')->alias == 'jssvc' ): ?>
+			<img src="<?php echo Config::get('app.asset_url'); ?>images/customer/<?php echo App::make('customer')->alias; ?>2.jpg" />
+		<?php elseif(App::make('customer')->alias == 'ccnu'): ?>
+			<a href="/" class="logo logo_ccnu" <?php echo \Ca\Service\ParamsService::get('logourl') ? 'style="background-image: url(\'' .  str_replace(array('{0}', '{1}'), array(Config::get('app.asset_url') . 'images', ''), \Ca\Service\ParamsService::get('logourl')) . '\')"' : ''; ?>></a>
+			<?php if (\Ca\Service\ParamsService::get('showsublogo', 1) == 1): ?>
+			<span class=" sublog_ccnu"><img src="<?php echo Config::get('app.asset_url'); ?>images/customer/<?php echo App::make('customer')->alias; ?>.png" /></span>
+			<?php endif; ?>
+		<?php else: ?>
+			<a href="/" class="logo" <?php echo \Ca\Service\ParamsService::get('logourl') ? 'style="background-image: url(\'' .  str_replace(array('{0}', '{1}'), array(Config::get('app.asset_url') . 'images', ''), \Ca\Service\ParamsService::get('logourl')) . '\')"' : ''; ?>></a>
+			<?php if (\Ca\Service\ParamsService::get('showsublogo', 1) == 1): ?>
+			<span class="sublogo"><img src="<?php echo Config::get('app.asset_url'); ?>images/customer/<?php echo App::make('customer')->alias; ?>.jpg" /></span>
+			<?php endif; ?>
+		<?php endif; ?>
+		<div class="help"><a href="#"></a></div>
+		<ul>
+			<li><a href="/">平台首页</a></li>
+			<!--<li><a href="#">GP项目简介</a></li>-->
+			<!--<li><a href="#">GP技术支持</a></li>-->
+			<li><a href="/download.html">应用下载</a></li>
+		<?php if(App::make('customer')->alias == 'njutcm' ): ?>	
+			<li><a href="/help/kms">帮助中心</a></li>
+		<?php else: ?>
+			<li><a href="/help/client">帮助中心</a></li>
+		<?php endif; ?>
+		</ul>
+	</div>
+</div>

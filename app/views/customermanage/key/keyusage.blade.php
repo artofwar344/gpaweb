@@ -1,0 +1,58 @@
+<script type="text/javascript">
+var visible = @if (Input::get("inner")) false @else true @endif;
+$(function() {
+	var statusValueClass = function(row) {
+		var ret = "";
+		switch (parseInt(row["status"])) {
+			case 2:
+				ret = "green";
+				break;
+			case 3:
+				ret = "red";
+				break;
+			default :
+				ret = "blue";
+				break;
+		}
+
+		return ret;
+	};
+
+	$.backend({
+		actionDisabledFields: visible ? [] : ["name"],
+		listParams: { "userid": "{{ $user_id }}" },
+		tableStructure: {
+			eid: "usageid",
+			columns: [
+				{ "key": "usageid", "header": "编号", "class": "number" },
+				{ "key": "user_name", "header": "用户名", "headertip": "该条激活记录的对应用户", "visible": true },
+				{ "key": "department_name", "header": "所属部门", "headertip": "用户的所属部门" },
+				{ "key": "product_name", "header": "商品", "headertip": "该条激活记录对应的商品" },
+				{ "key": "productname", "header": "安装商品", "headertip": "客户机安装的商品信息" },
+				{ "key": "type", "header": "激活模式", "headertip": "<strong>定时激活</strong>: 需要在180天后再次运行客户端激活<br/><strong>永久激活</strong>: 激活后永久保持激活状态" },
+				{ "key": "key_name", "header": "密钥", "headertip": "该条激活记录对应使用的密钥" },
+				{ "key": "ip_text", "header": "IP", "headertip": "激活用户的客户机IP" },
+				{ "key": "computerid", "header": "机器号", "class": "count", "headertip": "激活用户的客户机机器号" },
+				{ "key": "errorcode", "header": "错误代码", "class": "count", "headertip": "激活失败后的错误代码" },
+				{ "key": "begindate", "header": "开始时间", "class": "time", "headertip": "开始激活商品的时间" },
+				{ "key": "enddate", "header": "结束时间", "class": "time", "headertip": "商品激活结束时间" },
+				{
+					"key": "status_text", "header": "状态", "class": "state", "valueclass": statusValueClass,
+					"headertip": "<strong>开始激活</strong>: 商品正在进行激活操作<br/><strong>激活成功</strong>: 该次激活成功激活了商品<br/><strong>激活失败</strong>: 该次激活商品失败<br/><strong>激活重置</strong>: 该次激活由于网络问题挂起, 系统已自动重置该记录, 不计入激活次数"
+				}
+			]
+		},
+		selects: [ "keyid", "productid" ],
+		operators: []
+	});
+});
+</script>
+
+@actions (array('title' => '用户激活情况', 'buttons' => array()))
+
+@search
+	array('label' => '姓名', 'type' => 'textbox', 'name' => 'name', 'placeholder' => '激活用户姓名'),
+	array('label' => '商品', 'type' => 'select', 'name' => 'productid', 'values' => array()),
+	array('label' => '密钥', 'type' => 'select', 'name' => 'keyid', 'values' => array()),
+	array('label' => '状态', 'type' => 'select', 'name' => 'status', 'values' => Ca\Consts::$keyusage_status_texts)
+@endsearch

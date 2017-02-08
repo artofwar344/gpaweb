@@ -1,0 +1,244 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent}body{line-height:1}ol, ul{list-style:none}blockquote, q{quotes:none}blockquote:before, blockquote:after, q:before, q:after{content:''; content:none}:focus{outline:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse: collapse; border-spacing:0}
+.clear{clear:both !important; line-height:0 !important; height:0 !important; font-size:0 !important; margin:0 !important; padding:0 !important; float:none !important; overflow:hidden; }
+
+body{font-family:"微软雅黑", "arial"; font-size:12px; color:#717171; background:#262d35}
+select, input{font-family:"微软雅黑", "arial"; font-size:12px}
+
+a{color:#414141; text-decoration:none}
+	a:hover{text-decoration:underline}
+
+.button_1{padding:12px 20px 12px 50px; background:#ea5c58 url(../../images/customer/common/icons.png) no-repeat 20px -46px; color:#fff; font-size:16px; text-decoration:none; position:absolute}
+	.button_1:hover{background-color:#ff726e; text-decoration:none}
+
+.button_2{padding:7px 13px; background:#007aa8; color:#fff; font-size:12px; text-decoration:none; position:absolute}
+	.button_2:hover{background-color:#4bc1ed; text-decoration:none}
+
+.select_1{border:solid 1px #ddd; padding:2px}
+
+.frame_1{width:980px; margin:0 auto}
+	.frame_1_l{width:230px; float:left}
+	.frame_1_r{width:720px; float:right}
+	.frame_1 p.copyright a{color:#fff}
+
+.header_1{font-size:22px; font-weight:normal; margin-bottom:20px}
+
+.block_1{border:1px solid #dbdbdb; width:326px; height:390px; float:left; margin-right:20px; background:#f3f3f3}
+	.block_1 h1{padding:10px; font-size:22px; font-weight:normal; background:#fff}
+	.block_1 ul{padding:10px; line-height:20px}
+		.block_1 ul span{font-size:16px; color:#3e79a5; margin-bottom:10px; display:block}
+
+.main_banner{background:url(../../images/customer/common/main_banner_bg.jpg) repeat-x; height:480px; margin:0 auto; position:relative}
+	.main_banner .banner{height:480px; background:url(../../images/customer/common/main_banner.jpg) no-repeat center 0; position:absolute; width:100%}
+
+.main_header{position:absolute; top:30px}
+	.main_header .logo{width:240px; height:48px; background:url(../../images/customer/common/logo.png) no-repeat; float:left; margin-top:7px}
+	.main_header .sublogo{float:left}
+		.main_header .sublogo img{width:100px; margin-top:15px}
+	.main_header ul{margin-left:20px; float:right; background:#fff; margin-top:10px}
+	.main_header li{border-right:1px solid #d2d2d2; float:left; font-size:14px}
+		.main_header li:last-child{border-right:none}
+		.main_header li a{color:#5d6266; font-weight:bold; text-decoration:none; padding:0 20px; float:left; line-height:40px}
+		.main_header li a:hover{background:#3e79a5; color:#fff}
+	.main_header .help{float:right; margin:10px 0 0 5px}
+	.main_header .help a{background:#3e79a5 url(../../images/customer/common/icons.png) no-repeat 12px 13px; width:40px; height:40px; display:block}
+	.main_header .help a:hover{background-color:#5395c6}
+	.main_header .account{position:absolute; right:0; top:-15px; color:#fff}
+		.main_header .account a{color:#fff}
+
+.main_banner_a{height:300px}
+	.main_banner_a .banner{height:300px}
+
+.main_content_frame{background:#fff; padding-bottom:20px}
+.main_content{padding-top:20px}
+
+.main_function{width:282px; float:right}
+	.main_function h1{font-size:22px; font-weight: normal; margin-bottom:10px}
+	.main_function .box_1{background:url(../../images/customer/common/icons.png) no-repeat 0 -130px; padding-left:130px; height:130px}
+		.main_function .box_1 li{line-height:25px}
+		.main_function .box_1 .phone_number{color:#3e79a5; background:url(../../images/customer/common/icons.png) no-repeat 0 -574px; padding-left:20px; font-size:14px; font-weight:bold}
+		.main_function .box_1 .mail{color:#3e79a5; background:url(../../images/customer/common/icons.png) no-repeat 0 -636px; padding-left:20px}
+
+	.main_function .box_2{background:url(../../images/customer/common/icons.png) no-repeat 0 -272px; padding-left:130px; height:140px}
+		.main_function .box_2 li{margin-bottom:10px; line-height:18px}
+		.main_function .box_2 li a{line-height:20px; color:#3e79a5; padding-left:20px}
+		.main_function .box_2 .new{background:url(../../images/customer/common/icons.png) no-repeat 0 -711px; text-decoration:none; padding:2px 0 2px 15px; margin:2px 0}
+		.main_function .box_2 .download{background:url(../../images/customer/common/icons.png) no-repeat 0 -780px; font-size:14px; display:inline-block; font-weight:bold}
+
+	.main_function .box_3{background:url(../../images/customer/common/icons.png) no-repeat 0 -414px; padding-left:130px; height:120px}
+		.main_function .box_3 li{line-height:18px}
+		.main_function .box_3 .more{color:#3e79a5; font-size:14px; margin-top:10px; display:inline-block; font-weight:bold}
+
+.main_footer{padding:20px 0}
+	.main_footer ul{float:left; margin-right:150px}
+	.main_footer ul a{color:#676f7b; font-size:14px; line-height:25px; text-decoration:none}
+		.main_footer ul a:hover{color:#fff}
+	.main_footer h1{font-size:16px; line-height:40px}
+	.main_footer h2{font-size:14px; color:#fff; float:right}
+	.main_footer p{margin-top:80px; color:#fff; text-align:center; display:inline-block; width:980px}
+
+
+.product_main{padding:0; margin-bottom:10px; background:#eee}
+	.product_main img{float:left; margin-right:20px}
+	.product_main .button_2{font-size:16px; font-weight:normal; margin-top:20px}
+	.product_main .download{float:left; margin-top:20px}
+		.product_main .download h2{margin-bottom:10px; font-size:14px; width:360px; line-height:20px}
+		.product_main .download ul{}
+			.product_main .download ul li{margin-bottom:10px}
+			.product_main .download ul label{width:70px; display:inline-block}
+
+.product_menu{}
+	.product_menu h1{font-size:16px !important; font-weight:normal; margin-bottom:10px}
+	.product_menu .list{}
+		.product_menu .list .item{display:block; border-bottom:solid 1px #ddd; background:no-repeat left center; height:60px; line-height:60px; padding-left:60px; font-size:14px}
+			.product_menu .list .item span{float:left; width:170px; margin-top:15px; line-height:16px}
+			.product_menu .list .item:hover{color:#000}
+			.product_menu .list .item.hot{color:#000; font-weight:bold}
+		.product_menu .list .item:last-child{border-bottom:none}
+
+.tabsheet_1 a{height:35px; line-height:35px; display:block; float:left; margin-right:5px; border:solid 1px #ddd; padding:0 15px; font-size:16px; text-decoration:none; background:#eee; color:#888}
+	.tabsheet_1 a.hot{background:#fff; border-bottom-color:#fff; color:#414141}
+
+.tabsheet_1_tabs{margin-top:-1px; *margin-top:-11px; border:solid 1px #ddd; padding:10px; line-height:18px}
+	.tabsheet_1_tabs h2{font-size:14px; margin-bottom:10px}
+	.tabsheet_1_tabs h3{margin:5px 0}
+
+.win8_introduction{width:700px; float:left}
+	.win8_introduction .content{width:340px; float:left; margin-bottom:10px}
+	.win8_introduction .content h2{font-size:12px; line-height:18px;}
+	.win8_introduction .content span{line-height:24px;}
+	.win8_introduction .right{margin-left:18px}
+	
+
+.win8_1_introduction{}
+	.win8_1_introduction ul{width:730px; padding-bottom:10px; float:left}
+	.win8_1_introduction li{width:218px; margin-top:10px; margin-right:20px; height:100px; float:left; overflow:hidden}
+		.win8_1_introduction li .icon{background:url(../../images/customer/common/win8_1/icon_app.jpg) no-repeat}
+		.win8_1_introduction li .app_2{background-position:0 -75px}
+		.win8_1_introduction li .app_3{background-position:0 -148px}
+		.win8_1_introduction li .app_4{background-position:0 -224px}
+		.win8_1_introduction li .app_5{background-position:0 -299px}
+		.win8_1_introduction li .app_6{background-position:0 -374px}
+		.win8_1_introduction li .app_7{background-position:0 -451px}
+		.win8_1_introduction li .app_8{background-position:0 -527px}
+		.win8_1_introduction li .app_9{background-position:0 -603px}
+		.win8_1_introduction li .app_10{background-position:0 -681px}
+		.win8_1_introduction li .app_11{background-position:0 -761px}
+		.win8_1_introduction li .app_12{background-position:0 -844px}
+		.win8_1_introduction li .app_13{background-position:0 -926px}
+		.win8_1_introduction li .app_14{background-position:0 -1007px}
+		.win8_1_introduction li .app_15{background-position:0 -1087px}
+		.win8_1_introduction li span{font-size:18px; font-weight:bold; padding-left:50px; line-height:40px; display:block}
+		.win8_1_introduction li p{line-height:18px; margin-top:5px}
+		
+	.win8_1_introduction .section{}	
+		.win8_1_introduction .section li{height:140px}
+			.win8_1_introduction .section li span{padding-left:0px}
+			
+			
+.win8_1_contrast{}
+		.win8_1_contrast ul{margin:10px 0}
+		.win8_1_contrast li{line-height:25px; background:url(../../images/customer/common/win8_1/icons.gif) no-repeat -14px -204px; padding-left:15px}
+		.win8_1_contrast h1{font-size:14px;}
+		.win8_1_contrast .left{float:left; width:340px;}	
+		.win8_1_contrast .left .top{width:340px; height:277px; background:url(../../images/customer/common/win8_1/contrast_left.jpg) no-repeat; margin-bottom:10px}
+			
+		.win8_1_contrast .right{float:right; width:340px;}	
+			.win8_1_contrast .right .top{width:340px; height:277px; background:url(../../images/customer/common/win8_1/contrast_right.jpg) no-repeat; margin-bottom:10px}				
+
+.product_download{margin-bottom:-20px}
+	.product_download .product{width:475px; height:189px; position:relative; margin-bottom:20px; float:left; margin-right:25px; border-bottom:solid 1px #ddd; padding-bottom:20px}
+	.product_download .even{margin-right:0}
+		.product_download .last{border:none}
+		.product_download .product img{float:left}
+		.product_download .product h2{font-size:16px; margin-left:20px; float:left; line-height:30px; font-weight:normal; color:#414141; display:block}
+		.product_download .product ul{float:left; width:200px; margin-left:20px; line-height:20px}
+		.product_download .product .button_2{left:260px; bottom:20px}
+		
+		.product_download .product_adobe{background:#fff no-repeat center 5px; border:solid 1px #ddd; width:145px; padding:5px; padding-top:15px; float:left; margin:0 3px 5px 0; height:300px; overflow:hidden}
+			.product_download .product_adobe h2{font-size:12px; float:left; line-height:20px; color:#414141; display:block; padding:10px 0; height:60px}
+			.product_download .product_adobe p{padding:20px 0}
+
+.product_required{}
+	.product_required td{border:1px solid #ddd; padding:8px}
+	.product_required th{font-size:14px; font-weight:bold; line-height:30px}
+	.product_required h3{font-size:12px; line-height:30px}
+	.product_required li{background: url("../../images/customer/common/icons.gif") no-repeat scroll -14px -208px transparent; line-height: 16px; margin-bottom: 10px; padding-left: 15px;}
+		.product_required li a{color:#717171}
+
+.download_page{}
+	.download_page img{width:100%}
+	.download_page h3{font-size:14px; line-height:30px}
+	.download_page h4{font-weight:normal; line-height:30px}
+	.download_page li{line-height:25px}
+	.download_page .select_2 {background: url("../../images/customer/common/textbox_1_bg.gif") no-repeat scroll left top transparent; border: 1px solid #666666; padding: 3px; width:150px}
+	.download_page label{ display: inline-block; width: 80px;}
+	.download_page .header_6{ background: url("../../images/customer/common/dot_1.gif") repeat-x scroll center center transparent; font-size: 14px;}
+		.download_page .header_6 span{ background: none repeat scroll 0 0 #fff; padding-right: 10px}
+	.download_page .actions{margin-top:15px; margin-bottom:15px}
+	.download_page  img{margin-bottom:10px}
+
+.product_office2013_assembly{height:70px}
+	.product_office2013_assembly ul{line-height:30px}
+	.product_office2013_assembly li{width:50px; margin-right:60px; background:url(../../images/customer/common/office2013/office2013_icons.jpg) no-repeat; float:left; padding-left:24px}
+	.product_office2013_assembly .excel{background-position: 0 -34px}
+	.product_office2013_assembly .ppt{background-position: 0 -72px}
+	.product_office2013_assembly .onenote{background-position: 0 -111px}
+	.product_office2013_assembly .outlook{background-position: 0 -154px}
+	.product_office2013_assembly .publisher{background-position: 0 -198px}
+	.product_office2013_assembly .access{background-position: 0 -241px}
+	.product_office2013_assembly .lync{background-position:0 -290px}
+	.product_office2013_assembly .infopath{background-position:0 -340px}
+
+
+.product_office2013_info{line-height:18px; margin-bottom:10px}
+	.product_office2013_info h3{color:#000; font-size:18px; text-transform:uppercase; font-weight:normal; margin-bottom:10px; margin-top:20px}
+	.product_office2013_info ul{}
+	.product_office2013_info li{margin-bottom:10px; background:url(../../images/customer/common/icons.gif) no-repeat -14px -208px; padding-left:15px; line-height:16px}
+	.product_office2013_info a{text-decoration:underline}
+	.product_office2013_info img{float:left; padding-right:20px}
+
+.product_office2013_configuration{}
+	.product_office2013_configuration td, .product_office2013_configuration th{border:solid 1px #eee; padding:5px}
+	.product_office2013_configuration th{font-size:14px}
+
+.product_win8{width:700px;}
+	.product_win8 li{float:left; width:330px; display:block; margin-left:20px; line-height:20px}
+	.product_win8 img{float:left; margin:5px 0;}
+
+
+
+.product_office2013{}
+	.product_office2013 li{width:420px}
+
+
+.product_special{width: 720px; margin-bottom:10px; float:left}
+	.product_special .special{width:149px; height:180px; float:left; background:#222 no-repeat top; margin-right:8px; color:#fff; padding:100px 10px 0 10px; line-height:15px}
+		 .product_special  .special strong{color:#888}
+			
+.proudct_functions{border-top:solid 1px #d1d3d4; padding-top:5px; overflow:hidden;width:708px}
+	.proudct_functions p{margin-bottom:5px}
+	.proudct_functions .functions{width:750px}
+	.proudct_functions .function{width:149px; float:left; margin-right:35px; height:270px;overflow: hidden;}
+		.proudct_functions .function img{border:solid 1px #d1d3d4}
+		.proudct_functions .function h3{margin:10px 0 5px 0; color:#000}
+		
+.product_contains{margin-bottom:10px}
+	.product_contains ul{}
+		.product_contains ul li{float:left; width:215px; display:block; background:url(../../images/customer/common/icons.gif) no-repeat -14px -208px; padding-left:15px}		
+		
+	
+.help_content{font-size:12px; padding:10px}
+	.help_content a{text-decoration:underline}
+	.help_content h2{font-size:16px; margin:10px 0; margin-top:30px}
+		.help_content h2:first-child{margin:0}
+	.help_content h3{font-size:14px; margin:10px 0}
+	.help_content p{line-height:18px; margin:10px 0}
+	.help_content .img{ padding:10px}
+	.help_content img{border:solid 2px #fff}
+	.help_content table{width:100%; line-height:18px}
+		.help_content table .errorcode{cursor:pointer; *cursor:hand}
+		.help_content table .errorcode td:first-child{width:200px; font-weight:bold}
+		.help_content table .errorcode .last_td a{color:#5395c6}
+		.help_content table td{padding:10px 5px; border:solid 1px #ddd}
+		
+

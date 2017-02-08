@@ -1,0 +1,89 @@
+<script type="text/javascript">
+	$(function() {
+		$(document).bind("clearSearch", function() {
+			$("#search_from").val("{{ date('Y-m-d') }}");
+			$("#search_to").val("{{ date('Y-m-d', strtotime('-1 Day')) }}")
+		});
+		$.backend({
+			tableStructure: {
+				eid: "customerid",
+				columns: [
+					{ "key": "customerid", "header": "编号", "class": "number" },
+					{ "key": "name", "header": "名称" },
+					{ "key": "user_count", "header": "新用户" },
+					{ "key": "weblogin_count", "header": "用户网页登录" },
+					{ "key": "clientlogin_count", "header": "用户客户端登录" },
+					{ "key": "requestkey_count", "header": "用户请求激活", "class": "state", "headertip": "用户发起申请密钥请求的次数" },
+					{ "key": "assignkey_count", "header": "管理员分配激活", "class": "state", "headertip": "管理员分配密钥的次数" },
+					{ "key": "keyusage_count", "header": "用户激活", "class": "time", "headertip": "用户激活成功的次数" }
+				]
+			},
+			selects: [  ],
+			category: "客户",
+			operators: [],
+			modifyStructure: { name: "name", alias: "alias", module: "[module]", status: "status" },
+			modifyDialogWidth: 400,
+			validateRule: {
+				name: {
+					required: true,
+					maxlength: 64
+				},
+				alias: {
+					required: true,
+					maxlength: 64,
+					lettersonly: true
+				},
+				view:
+				{
+					required: true
+				},
+				organizeid:
+				{
+					required: true
+				},
+				status: {
+					required: true
+				}
+			},
+			validateMessages: {}
+		});
+
+		$("#search_from").datepicker({
+			defaultDate: "-3m",
+			changeMonth: true,
+			numberOfMonths: 3,
+			dateFormat: "yy-mm-dd",
+			minDate: "2013-01-01",
+			maxDate: "+0d",
+			onClose: function(selectedDate) {
+				$("#search_to").datepicker("option", "minDate", selectedDate);
+			}
+		}).val("{{ date('Y-m-d', strtotime('-1 Day')) }}");
+		$("#search_to").datepicker({
+			defaultDate: "+0d",
+			changeMonth: true,
+			numberOfMonths: 3,
+			dateFormat: "yy-mm-dd",
+			minDate: "2013-01-01",
+			maxDate: "+0d",
+			onClose: function(selectedDate) {
+				$("#search_from").datepicker("option", "maxDate", selectedDate);
+			}
+		}).val("{{ date('Y-m-d') }}");
+
+		$(".main_actions .button_export").click(function() {
+//			$('.main_search form').serialize();
+			window.location.href = "/customerstatistics/export?" + $('.main_search form').serialize();
+			return false;
+		});
+
+	});
+</script>
+
+@actions (array('title' => '客户统计', 'buttons' => array('export')))
+
+@search
+	array('label' => '名称', 'type' => 'textbox', 'name' => 'name'),
+	array('label' => '开始时间', 'type' => 'textbox', 'name' => 'from'),
+	array('label' => '结束时间', 'type' => 'textbox', 'name' => 'to')
+@endsearch

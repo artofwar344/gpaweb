@@ -1,0 +1,21 @@
+<?php if (count($documents) > 0): ?>
+<div class="ranking_block">
+	<h1><?php echo $rankTitle; ?></h1>
+	<table>
+		<?php foreach ($documents as $key => $document): ?>
+			<tr>
+				<td class="name">
+					<span class="index_<?php echo $key; ?>"><?php echo $key + 1; ?></span>
+					<a class="title" title="<?php echo $document->name; ?>" href="<?php echo url('document/detail?id=' . $document->documentid); ?>"><?php echo $document->name; ?></a>
+				</td>
+				<td class="pages">
+					<?php if ($document->extension == 'mp4'): ?> 视频 <?php endif; ?>
+					<?php if ($document->pages != null): ?> <?php echo $document->pages; ?>P <?php endif; ?>
+				</td>
+			</tr>
+		<?php endforeach; ?>
+	</table>
+</div>
+<div class="clear"></div>
+<?php endif; ?>
+

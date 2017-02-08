@@ -1,0 +1,24 @@
+<?php  $uri = Request::path();  ?>
+<div class="product_menu">
+	<h1>使用帮助</h1>
+	<div class="list">
+		<a href="/help/client" style="background-image:url(<?php echo Config::get('app.asset_url') . 'images/customer/common/help/gpclient_logo.png'; ?>)"
+		   class="item <?php if($uri == 'help/client'): ?> hot <?php endif; ?>">
+			GP激活客户端<?php echo \Ca\Service\ParamsService::get('clientpublishversion') == 3 ? '3.0' : ''; ?>
+		</a>
+	</div>
+	<div class="list">
+		<a href="/help/faq" style="background-image:url(<?php echo Config::get('app.asset_url') . 'images/customer/common/help/question.png'; ?>)"
+		   class="item <?php if($uri == 'help/faq'): ?> hot <?php endif; ?>">常见问题</a>
+	</div>
+	<?php if($categories): ?>
+		<div class="list">
+			<?php foreach($categories as $category): ?>
+					<a href="/help/faq/<?php echo $category->categoryid; ?>"
+					   style="background-image:url(<?php echo Config::get('app.asset_url') . 'images/customer/common/help/question.png'; ?>)"
+					   class="item <?php if($uri == 'help/faq/'.$category->categoryid): ?> hot <?php endif; ?>"><?php echo $category->name; ?>
+					</a>
+			<?php endforeach; ?>
+		</div>
+	<?php endif; ?>
+</div>

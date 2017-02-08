@@ -1,0 +1,18 @@
+<?php  $hot_question = \Ca\Service\KnowsService::get_hot_question()  ?>
+<?php if (count($hot_question) > 0): ?>
+<div class="ranking_block">
+	<h1>问题排行榜</h1>
+	<table>
+		<?php foreach ($hot_question as $key => $question): ?>
+			<tr>
+				<td class="name">
+					<span class="index_<?php echo $key; ?>"><?php echo $key + 1; ?></span>
+					<a class="title" title="<?php echo $question->title; ?>" href="<?php echo url('knows/question?id=' . $question->questionid); ?>"><?php echo $question->title; ?></a>
+				</td>
+				<td class="pages"><?php echo $question->answer_count; ?></td>
+			</tr>
+		<?php endforeach; ?>
+	</table>
+</div>
+<div class="clear"></div>
+<?php endif; ?>

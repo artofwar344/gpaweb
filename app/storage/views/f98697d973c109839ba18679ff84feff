@@ -1,0 +1,15 @@
+<h2>Office 2013 专业增强版下载安装</h2>
+<h3 class="header_6">
+	<span>软件安装</span>
+</h3>
+<h4>1. 运行安装程序</h4>
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/01.jpg'; ?>">
+<h4>2. 选择安装方式</h4>
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/02.jpg'; ?>">
+<h4>3. 选择要安装的组件、安装位置（注：这一步是选择上图的’自定义‘后出现的）</h4>
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/03.jpg'; ?>">
+<h4>4. 正在安装</h4>
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/04_1.jpg'; ?>">
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/04_2.jpg'; ?>">
+<h4>5. 安装完成</h4>
+<img src="<?php echo Config::get('app.asset_url') . 'images/customer/common/office2013/05.jpg'; ?>">

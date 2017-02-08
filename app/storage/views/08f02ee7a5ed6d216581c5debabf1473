@@ -1,0 +1,335 @@
+<script type="text/javascript">
+var visible = <?php if (Input::get("inner")): ?> false <?php else: ?> true <?php endif; ?>;
+var departmentId = <?php echo $manager_department_id; ?>;
+var keyassignRole <?php if (Ca\Service\ManagerService::check_role('keyassign')): ?> = true <?php endif; ?>;
+var keyusageRole <?php if (Ca\Service\ManagerService::check_role('keyusage')): ?> = true <?php endif; ?>;
+$(function() {
+	var userAuth = function(eid) {
+		$.post("/user/auth", { "eid": eid }, function(ret) {
+			backend.list();
+			if (ret.code != 1) {
+				backend.showMessage("错误", ret.message);
+			}
+		});
+	};
+
+	var authEnable = function(row) {
+		return row["status"] == 3;
+	};
+
+	var deleteTip = function(row) {
+		return deleteEnable(row) ?
+			"删除用户" : "用户已有相关操作, 无法删除<br/><span class='subtip_1'><strong>相关操作</strong>: 申请激活, 已激活商品, 发布文档、 问答等</span>";
+	};
+
+	var deleteEnable = function(row) {
+		return row["userkeycount"] == 0;
+	};
+
+	var authTip = function(row) {
+		return row["status"] != 3 ? "该用户已审批" : "修改用户状态为\"正常\"<br/><span class='subtip_1'>审批后, 用户可以正常登录网站和客户端</span>";
+	};
+
+	var statusValueClass = function(row) {
+		var ret = "";
+		switch (parseInt(row["status"])) {
+			case 1:
+				ret = "green";
+				break;
+			case 2:
+				ret = "red";
+				break;
+			case 3:
+				ret = "blue";
+				break;
+		}
+
+		return ret;
+	};
+
+	var checkboxEnable = function(row) {
+		return authEnable(row);
+	};
+
+	var backend = $.backend({
+		listParams: { "departmentid": "<?php echo $department_id; ?>" },
+		tableStructure: {
+			eid: "userid",
+			checkbox: true,
+			<!--checkboxEnable: checkboxEnable,-->
+			columns: [
+				{ "key": "userid", "header": "编号", "class": "number" },
+				{ "key": "username", "header": "登录帐号", "headertip": "用于登录客户端和网站的账号" },
+				{ "key": "email", "header": "邮箱", "headertip": "用户邮箱, 用于收取通知邮件" },
+				{ "key": "name", "header": "姓名", "headertip": "用户真实姓名" },
+				{ "key": "type_text", "header": "身份类型", "headertip": "用户身份类型" },
+				{ "key": "departmentid_text", "header": "所属部门", "headertip": "<strong>格式</strong>: 用户所属部门 &gt; 直属部门", "visible": visible },
+				{ "key": "status_text", "header": "状态", "class": "state", "headertip": "<strong>正常</strong>: 用户可以正常登录网站和客户端<br/><strong>锁定</strong>: 用户不能登录网站和客户端<br/><strong>待审核</strong>: 用户在网站和客户端注册后, 未经管理员审核", "valueclass": statusValueClass },
+				{ "key": "useraccesslogcount", "header": "登陆次数", "class": "count", "headertip": "用户在网站和客户端登录次数" },
+				{ "key": "userkeycount", "header": "请求次数", "class": "count", "headertip": "用户申请密钥的次数" },
+				{ "key": "keyusagecount", "header": "激活次数", "class": "count", "headertip": "用户已使用激活量, 包括激活失败和成功" },
+				{ "key": "createdate", "header": "注册时间", "class": "time" }
+			]
+		},
+		category: "用户",
+		selects: [ "departmentid" ],
+		modifyStructure: { name: "name", username: "username", email: "email", departmentid: "departmentid", status: "status", type: "type" },
+		operators: [
+			{ type: "callback", callback: userAuth, text: "审批", css: "btn_auth", enable: authEnable, tip: authTip },
+			visible == true ? { type: "iframe", url: "/activationstatus?id={eid}", text: "激活统计", css: "btn_view", width: "80%", height: "570px", tip: "激活统计" } : "",
+			keyassignRole && visible == true ? { type: "iframe", url: "/keyassign?id={eid}", text: "激活分配", css: "btn_view", width: "80%", height: "570px", tip: "该用户的激活分配信息" } : "",
+			keyusageRole && visible == true ? { type: "iframe", url: "/keyusage?id={eid}", text: "激活情况", css: "btn_view", width: "80%", height: "570px", tip: "该用户的激活情况" } : "",
+			{ type: "modify", tip: "编辑用户信息", text: "编辑", css: "btn_modify" },
+			{ type: "delete", tip: deleteTip, enable: deleteEnable, text: "删除", css: "btn_delete" }
+		],
+		validateRule: {
+			name: {
+				required: true,
+				maxlength: 64
+			},
+			username: {
+				required: true,
+				maxlength: 64
+			},
+			type: {
+				required: true
+			},
+			email: {
+				email: true,
+				required: true,
+				maxlength: 128
+			},
+			departmentid: {
+				required: true
+			},
+			status: {
+				required: true
+			},
+			password: {
+				required: true
+			}
+		},
+
+		modifyUnvalidateRules: [ "password" ],
+		validateMessages: {
+			name: {
+				required: "名称不能为空",
+				maxlength: "名称长度不得超过64"
+			},
+			type: {
+				required: "请选择身份类型"
+			},
+			username: {
+				required: "登录帐号不能为空",
+				maxlength: "登录帐号长度不得超过64"
+			},
+			departmentid: {
+				required: "请选择所属部门"
+			},
+			status: {
+				required: "请选择状态"
+			},
+			email: {
+				required: "邮箱不能为空",
+				maxlength: "邮箱长度不得超过128",
+				email: "不是合法的邮箱格式"
+			},
+			password: {
+				required: "密码不能为空"
+			}
+		}
+	});
+	var dlgImport = $(".dlg_import");
+	var formImport = dlgImport.find("form");
+	var fileSeletor = $("tr:first", formImport);
+	var preview = $(".preview_list", dlgImport).hide();
+	var btnPreview = $(".preview", dlgImport);
+	var btnSubmit = $(".submit", dlgImport);
+	dlgImport.dialog("option", "width", 350)
+		.find(".preview").click(function() {
+			if (!formImport.valid()) return false;
+			if ($(this).hasClass("gray")) return false;
+			$(this).addClass("gray");
+			var self = this;
+			var file = $(".button_import", dlgImport)[0].files[0];
+			$(".error_list", dlgImport).html("");
+			preview.text("");
+			if (file != null)
+			{
+				$.ajax({
+					url: "/user/importpreview",
+					type: "POST",
+					dataType: "json",
+					data: file,
+					processData: false,
+					success: function(data) {
+						$(self).removeClass("gray");
+						btnPreview.hide();
+						btnSubmit.show();
+						var table = $("<table />");
+						var form_data = $("<div />").addClass("form_data");
+						$.each(data.list, function(i, item) {
+							var tr = $("<tr />");
+							$("<td />").text(item[0]).appendTo(tr);
+							$("<td />").text(item[1]).appendTo(tr);
+							$("<td />").text(item[2]).appendTo(tr);
+							$("<td />").text(item[3]).appendTo(tr);
+							tr.appendTo(table);
+						});
+						form_data.appendTo(formImport);
+						table.appendTo(preview);
+						preview.show();
+						fileSeletor.hide();
+					}
+				});
+			}
+			return false;
+		}
+	);
+	btnSubmit.click(function() {
+		var file = $(".button_import", dlgImport)[0].files[0];
+		$(".button_import", dlgImport).val("");
+		if (file != null) {
+			$.ajax({
+				url: "/user/import",
+				type: "POST",
+				dataType: "json",
+				data: file,
+				processData: false,
+				success: function(data) {
+					$(self).removeClass("gray");
+					if (data.errors.length > 0) {
+						var ulError = $("<ul />");
+						$.each(data.errors, function(i, error) {
+							var errorText = '';
+							switch (error.code)
+							{
+								case 1:
+								case 5:
+									errorText = "数据格式错误!";
+									break;
+								case 2:
+									errorText = "电子邮箱格式错误!";
+									break;
+								case 3:
+									errorText = "用户名已存在!";
+									break;
+								case 4:
+									errorText = "电子邮箱已存在!";
+									break;
+							}
+							$("<li />").text("第 "+ error.line + " 行: " + errorText).appendTo(ulError);
+						});
+						if (data.errors.length != data.count) backend.list();
+						$(".info", dlgImport).html(
+							"导入</strong>" + data.count +
+								"</strong>个用户" + ", <span class='red'><strong>" + data.errors.length + "</strong>个导入失败</span>! 错误如下: ");
+						if (data.errors.length > 0) ulError.appendTo($(".error_list", dlgImport));
+					} else {
+						backend.list();
+						$(".info", dlgImport).html(
+							"成功导入</strong>" + data.count + "</strong>个用户!");
+					}
+					preview.hide();
+					btnSubmit.hide();
+					formImportReset();
+				}
+			});
+		}
+	});
+	$(".main_actions .button_import").click(function() {
+		dlgImport.find(".result").html("");
+		formImportValidate.resetForm();
+		$("input", formImport).removeClass("error_1");
+		dlgImport.dialog("open");
+		formImportReset();
+		$(".info", dlgImport).html("选择用户列表文件批量导入用户!<p class='more_info'>[文件格式: <strong>csv</strong>, 文件编码: <strong>gbk</strong>] (<a href=\"<?php echo Config::get('app.asset_url'); ?>files/import_sample.csv\">样本</a>)</p>");
+		$(".error_list", dlgImport).html("");
+		return false;
+	});
+
+	var formImportReset = function() {
+		preview.hide();
+		fileSeletor.show();
+		btnSubmit.hide();
+		btnPreview.show();
+	};
+
+	var formImportValidate = formImport.validate({
+		errorClass: "error_1",
+		errorPlacement: function(error, element) {
+			error.appendTo(element.parent("td").next("td"));
+		},
+		rules: {
+			csv_import: "required"
+		},
+		messages: { csv_import: "请选择一个csv文件" }
+	});
+
+	$(".multi_actions .button_auth").click(function() {
+		if ($(this).hasClass("button_1_disabled")) return false;
+		$(this).addClass("button_1_disabled");
+
+		$.post("/user/authmulti", { eids: backend.checkedRow() }, function() {
+			backend.clearCheckedRow();
+			backend.list();
+		});
+
+		return false;
+	});
+});
+</script>
+
+<div class="dialog_1 dlg_import">
+	<h1>导入用户</h1>
+	<div class="info info_1"></div>
+	<div class="preview_list" style="overflow-y:auto; background:white; border:1px solid #888; margin:10px; height:100px;"></div>
+	<div class="error_list"></div>
+	<form>
+		<table>
+			<tr>
+				<td class="label"><label>csv文件:</label></td>
+				<td><input type="file" name="csv_import" class="textbox_1 textbox_1_file button_import" required="true" accept=".csv" style="*width:248px" /></td>
+				<td class="error"></td>
+			</tr>
+		</table>
+	</form>
+	<div class="actions">
+		<a href="#" class="button_1 button_1_a preview">预览</a>
+		<a href="#" class="button_1 button_1_a submit">提交</a>
+		<a href="#" class="button_1 button_1_a close">取消</a>
+	</div>
+	<a href="#" class="close header_close"></a>
+</div>
+
+<?php if (Ca\Service\ManagerService::check_role('user.new') == false || Input::get('inner')): ?>
+<?php echo HtmlExt::htmlActions (array('title' => (empty($department_name) ? '用户管理' : '部门: ' . $department_name), 'action' => '用户', 'buttons' => array())); ?>
+<?php else: ?>
+<?php if (Auth::user()->top): ?>
+<?php echo HtmlExt::htmlActions (array('title' => (empty($department_name) ? '用户管理' : '部门: ' . $department_name), 'action' => '用户', 'buttons' => array('add'))); ?>
+<?php else: ?>
+<?php echo HtmlExt::htmlActions (array('title' => (empty($department_name) ? '用户管理' : '部门: ' . $department_name), 'action' => '用户', 'buttons' => array('add', 'import'))); ?>
+<?php endif; ?>
+<?php endif; ?>
+
+<?php echo HtmlExt::htmlMainSearch(array(
+	array('label' => '姓名', 'type' => 'textbox', 'name' => 'name', 'placeholder' => '用户真实姓名'),
+	array('label' => '帐号', 'type' => 'textbox', 'name' => 'username', 'placeholder' => '用户登录帐号'),
+	array('label' => '身份类型', 'type' => 'select', 'name' => 'type', 'values' => Ca\Consts::$user_type_text),
+	array('label' => '状态', 'type' => 'select', 'name' => 'status', 'values' => Ca\Consts::$user_status_texts)
+)); ?>
+
+<div class="multi_actions">
+	<span class="selected"><span class="tip_1" title="选择多条记录批量操作<br/><span class='subtip_1'>可以在多页同时选择</span>"></span> 批量操作: <strong>0</strong> 条</span>
+	<a href="#" class="button_1 button_1_disabled button_auth">审批</a>
+</div>
+
+<?php echo HtmlExt::htmlDialogNew(array(
+	array('label' => '姓名', 'type' => 'textbox', 'name' => 'name', 'placeholder' => '用户真实姓名'),
+	array('label' => '身份类型', 'type' => 'select', 'name' => 'type', 'values' => Ca\Consts::$user_type_text),
+	array('label' => '登陆账号', 'type' => 'textbox', 'name' => 'username', 'placeholder' => '用户登录账号'),
+	array('label' => '邮箱', 'type' => 'textbox', 'name' => 'email', 'placeholder' => '用户电子邮箱'),
+	array('label' => '登陆密码', 'type' => 'password', 'name' => 'password', 'placeholder' => '用户登录密码'),
+	array('label' => '所属部门', 'type' => 'select', 'name' => 'departmentid'),
+	array('label' => '状态', 'type' => 'select', 'name' => 'status', 'values' => Ca\Consts::$user_status_texts)
+)); ?>

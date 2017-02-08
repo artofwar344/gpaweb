@@ -1,0 +1,18 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title><?php if (!empty($title)): ?> <?php echo $title; ?> - <?php endif; ?> <?php echo $sitename; ?></title>
+	<link rel="shortcut icon" href="<?php echo Config::get('app.asset_url'). '/images/share/logo.ico'; ?>" type="image/x-icon" />
+	<link href="<?php echo Config::get('app.asset_url') . 'css/soft.css?' . Ca\Consts::$ca_version; ?>" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery-ui-1.9.2.custom.min.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.resize.js"></script>
+	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/jquery.hoverIntent.minified.js"></script>
+<!--	<script type="text/javascript" src="<?php echo Config::get('app.asset_url'); ?>scripts/validate.min.js"></script>-->
+</head>
+
+<body>
+<?php echo $__env->make('soft.partials.mainheader', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $body; ?>
+<?php echo $__env->make('soft.partials.mainfooter', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

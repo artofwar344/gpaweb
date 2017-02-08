@@ -1,0 +1,22 @@
+<div class="frame_1 main_content">
+	<div class="frame_1_l">
+		<?php if (View::exists('customer.' . App::make('customer')->alias . '.partials.help.menu')): ?>
+		<?php echo $__env->make('customer.' . App::make('customer')->alias . '.partials.help.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php else: ?>
+		<?php echo $__env->make('customer.common.partials.help.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<?php endif; ?>
+	</div>
+
+	<div class="frame_1_r">
+		<?php if($helps): ?>
+			 <?php foreach($helps as $help): ?>
+
+				<h1 class="header_1"><?php echo $help->title; ?></h1>
+				<div class="help_content">
+					<p><?php echo $help->content; ?></p>
+				</div>
+			 <?php endforeach; ?>
+		<?php endif; ?>
+	</div>
+	<div class="clear"></div>
+</div>

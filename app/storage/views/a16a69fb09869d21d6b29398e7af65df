@@ -1,0 +1,40 @@
+<style>
+	.news_box{
+		width: 700px;
+		float: left;
+	}
+</style>
+<div class="frame_1 site_path">
+	当前位置：
+	<a href="/">首页</a> &gt;
+	<a href="/news">新闻</a> &gt;<?php echo $category->name; ?></div>
+<div class="frame_1 news_page">
+<div class="left software_list">
+
+	<div class="news_list news_box">
+		<div class="header_1">
+			<h1><a href="/news/list-<?php echo $category->categoryid; ?>.html"><?php echo $category->name; ?></a></h1>
+		</div>
+		<ul class="box_l">
+			<?php foreach ($articles as $key => $result): ?>
+			<?php if ($key % 2 == 0): ?>
+			<li><a href="/news/<?php echo $result->articleid; ?>.html"><?php echo $result->title; ?></a></li>
+			<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+		<ul class="box_r">
+			<?php foreach ($articles as $key => $result): ?>
+			<?php if ($key % 2 == 1): ?>
+			<li><a href="/news/<?php echo $result->articleid; ?>.html"><?php echo $result->title; ?></a></li>
+			<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+
+	<?php echo $articles->links(); ?>
+	<?php echo $__env->make('soft.partials.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+</div>
+
+
+<div class="clear"></div>
+</div>

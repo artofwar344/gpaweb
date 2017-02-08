@@ -1,0 +1,22 @@
+<div class="frame_2_r">
+	<div class="block_2">
+		<h1 class="header_2 header_2_download">常用软件下载</h1>
+		<?php $popular = Ca\Service\SoftService::soft_popular(20); ?>
+		<ul class="content">
+			<?php foreach ($popular as $key => $soft): ?>
+			<li><a href="/soft/<?php echo $soft->softid; ?>.html"><?php echo $soft->name; ?> <span><?php echo $soft->version; ?></span></a><strong><?php echo Ca\Common::datetime_to_date($soft->updatedate); ?></strong></li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+	<div class="ad_1"><?php echo Ca\Service\AdService::show('270h_rb2', 'soft'); ?></div>
+	<div class="splitter_1"></div>
+	<div class="block_1">
+		<h1 class="header_2 header_2_news">热点新闻</h1>
+		<?php $hotest = Ca\Service\ArticleService::article_hot(20); ?>
+		<ul class="content">
+			<?php foreach ($hotest as $article): ?>
+			<li><a href="/news/<?php echo $article->articleid; ?>.html"><?php echo $article->title; ?></a></li>
+			<?php endforeach; ?>
+		</ul>
+	</div>
+</div>
